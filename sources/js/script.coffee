@@ -75,7 +75,7 @@ size = ()->
 			if $.cookie('nav_position') != pos
 				$.cookie('nav_position', pos);
 			return pos
-			
+
 	$('#content > .text').css 'min-height', $(window).height()-60
 
 	autoHeight($('.text .news, .text .reviews, .text .list'))
@@ -91,6 +91,7 @@ init_popup = ()->
 	$("a[rel^='prettyPhoto']").prettyPhoto
 		social_tools: ""
 		deeplinking: false
+		gallery_markup: ""
 
 $(document).ready ->
 

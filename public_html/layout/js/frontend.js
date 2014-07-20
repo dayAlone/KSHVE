@@ -14519,7 +14519,8 @@ var pp_alreadyInitialized = false; // Used for the deep linking to make sure not
   init_popup = function() {
     return $("a[rel^='prettyPhoto']").prettyPhoto({
       social_tools: "",
-      deeplinking: false
+      deeplinking: false,
+      gallery_markup: ""
     });
   };
 

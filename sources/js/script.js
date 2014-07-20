@@ -106,7 +106,8 @@
   init_popup = function() {
     return $("a[rel^='prettyPhoto']").prettyPhoto({
       social_tools: "",
-      deeplinking: false
+      deeplinking: false,
+      gallery_markup: ""
     });
   };
 
