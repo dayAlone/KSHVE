@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+			"Новости", 
+			"/about/news/",
+			Array(), 
+			Array(), 
+			"" 
+		),
+	Array(
+			"История", 
+			"/about/history/",
+			Array(), 
+			Array(), 
+			"" 
+		),
+	Array(
+			"Отзывы", 
+			"/about/reviews/",
+			Array(), 
+			Array(), 
+			"" 
+		),
+	Array(
+			"Отчет о деятельности", 
+			"/about/report/",
+			Array(), 
+			Array(), 
+			"" 
+		),
+	Array(
+			"Стратегические партнеры", 
+			"/about/partners/",
+			Array(), 
+			Array(), 
+			"" 
+		)
+);
+?>

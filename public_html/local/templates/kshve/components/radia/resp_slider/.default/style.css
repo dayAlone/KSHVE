@@ -1,0 +1,19 @@
+.background--dark a, .background--dark a:hover {
+	color: white;
+}
+.rest_slider a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+div.news-list img.preview_picture
+{
+	float:left;
+	margin:0 4px 6px 0;
+}
+.news-date-time {
+	color:#486DAA;
+}
