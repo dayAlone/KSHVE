@@ -15,7 +15,8 @@
     "animate.css": "latest",
     "arctext.js": "git@github.com:codrops/Arctext.git",
     "prettyPhoto": "git@github.com:scaron/prettyphoto.git",
-    "slick-carousel": "*"
+    "slick-carousel": "*",
+    "jquery.cookie": "~1.4.1"
   },
   "moduleType": [
     "amd",

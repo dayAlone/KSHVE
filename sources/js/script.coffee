@@ -71,9 +71,11 @@ size = ()->
 			c = $('#nav p.center').height() + parseInt($('#nav .content').css('padding-top').split('px')[0])
 			d = $('#nav ul').height()
 			z = (a - b - c)/2
-			console.log z
-			return c + z - d/2 
-
+			pos = c + z - d/2
+			if $.cookie('nav_position') != pos
+				$.cookie('nav_position', pos);
+			return pos
+			
 	$('#content > .text').css 'min-height', $(window).height()-60
 
 	autoHeight($('.text .news, .text .reviews, .text .list'))
@@ -84,15 +86,21 @@ size = ()->
 		vignettes()
 
 	return true
-		
 
-$(document).ready ->
-
+init_popup = ()->
 	$("a[rel^='prettyPhoto']").prettyPhoto
 		social_tools: ""
 		deeplinking: false
 
+$(document).ready ->
+
+	init_popup()
+
 	$('.gallery .slider').slick
+		onInit: ()->
+			init_popup()
+		onAfterChange: ()->
+			init_popup()
 		slidesToShow: 6
 		customPaging: 10
 		responsive: [{

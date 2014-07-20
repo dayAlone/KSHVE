@@ -29,6 +29,7 @@ module.exports = (grunt)->
 							'./bower_components/fotorama/fotorama.js'
 							'./bower_components/slick-carousel/slick/slick.js'
 							'./bower_components/prettyPhoto/js/jquery.prettyPhoto.js'
+							'./bower_components/jquery.cookie/jquery.cookie.js'
 							'<%= path.sources %>/js/script.js'
 						]
 

@@ -140,11 +140,6 @@ a:hover {
   width: 100%;
 }
 #nav ul {
-  -webkit-transition-property: ;
-  -moz-transition-property: ;
-  -o-transition-property: ;
-  -ms-transition-property: ;
-  transition-property: ;
   float: left;
   width: 100%;
   padding: 0;
