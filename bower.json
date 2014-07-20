@@ -1,0 +1,32 @@
+{
+  "name": "kremlin-ksk",
+  "version": "0.0.1",
+  "authors": [
+    "dayAlone <andrey.slider@gmail.com>"
+  ],
+  "description": "Kremlin-Ksk site",
+  "license": "MIT",
+  "homepage": "www.kremlin-ksk.ru",
+  "private": true,
+  "dependencies": {
+    "jquery": "latest",
+    "bootstrap": "latest",
+    "fotorama": "latest",
+    "animate.css": "latest",
+    "arctext.js": "git@github.com:codrops/Arctext.git",
+    "prettyPhoto": "git@github.com:scaron/prettyphoto.git",
+    "slick-carousel": "*"
+  },
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "sources/bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,52 @@
+include includes/header
+<body>
+include includes/nav
+
+#content
+	#contacts
+		span 
+			| Тел./факс: <a href="tel:84956170444">+7 (495) 617-04-44</a>
+			a.call(data-toggle="modal", data-target="#Call") перезвоните мне
+			| E-mail: <a href="mailto:info@kremlin-ksk.ru">info@kremlin-ksk.ru</a>
+		a.search(href="#")
+			include ../../public_html/layout/images/svg/search.svg
+		#search
+			input(type="text")
+	.text.vignettes
+		.before
+			include ../../public_html/layout/images/svg/vensel-1-tl.svg
+			include ../../public_html/layout/images/svg/vensel-1-tr.svg
+			include ../../public_html/layout/images/svg/vensel-1-bl.svg
+			include ../../public_html/layout/images/svg/vensel-1-br.svg
+		.after
+		.content
+			p.center
+				img(src="/layout/images/tmp/1.png")
+			h1.center Совместная команда КПЭПП и КШВЕ по джигитовке
+			.divider
+			p.center
+				| «Кремлевская школа верховой езды» представляет разработанное совместно с Кавалерийским Почетным Эскортом Президентского полка уникальное конное шоу «Возрождая традиции». Мы восстановили то, что составляло гордость России, целый пласт национальной воинской и спортивной конной культуры – русское конное боевое искусство «джигитовка». То, что умели русские кавалеристы в историческом прошлом, и сегодня является высшим образцом традиций русской школы верховой езды для нас и навсегда останется таковым для наших потомков.
+			.video.center
+				| <iframe width="560" height="315" src="//www.youtube.com/embed/hzHgkLDUcKk" frameborder="0" allowfullscreen></iframe>
+			.row
+				.col-md-6
+					p В упражнениях по владению шашкой и пикой всадники наносят рубящие и колющие удары по различным предметам, установленным в определенном порядке. Самыми эффектными из упражнений этого раздела является рубка лозы и разрубание предметов, установленных на специальной платформе. В упражнении по стрельбе всадники из пневматического пистолета поражают мишени, при этом их лошади двигаются резвым галопом. Не менее зрелищно и метание холодного оружия - ножей и кинжалов.
+				.col-md-6
+					p В разделе «Вольная джигитовка» выполняются упражнения различного уровня сложности, начиная с простого «Стойка на стремени» и заканчивая таким сложнейшим, как «Уральская вертушка». Всадники не только выполняют элементы на полном скаку, но и преодолевают при этом препятствие, в том числе и горящее. В заключительной части конного шоу, джигиты выстраивают пирамиду в «три этажа», на самой вершине которой гордо развивается российский флаг, и сердца зрителей наполняются гордостью за нашу родную страну, за ее прошлое, настоящее и будущее.
+			p Военно-прикладные виды конного спорта – понятие, эквивалентное исторически сложившемуся термину «джигитовка». Соревнования по военно-прикладным видам конного спорта – джигитовке проходят по следующим направлениям: «Владение оружием», «Вольная джигитовка», «Произвольная программа». Существует и дополнительный раздел «Показательная программа».
+			.gallery
+				p.center
+					include ../../public_html/layout/images/svg/ribbon2.svg
+				.slider
+					- for (var i = 1; i < 13; ++i) {
+					- var x = 0;
+					- if(i > 6) x = 13 - i;
+					- else x = i;
+					.item
+						a(href="/layout/images/tmp/tmp-#{x}.jpg" rel="prettyPhoto[]").image(style="background-image: url(/layout/images/tmp/tmp-#{x}.jpg)")
+					- }
+			.vensel-final
+				include ../../public_html/layout/images/svg/end-vensel-left.svg
+				.center
+				include ../../public_html/layout/images/svg/end-vensel-right.svg
+include includes/footer

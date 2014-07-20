@@ -1,0 +1,121 @@
+include includes/header
+<body class="index">
+include includes/nav
+
+#content
+	.row
+		.col-md-4.col-xs-4
+			#mission.vignettes
+				.before
+					include ../../public_html/layout/images/svg/vensel-1-tl.svg
+					include ../../public_html/layout/images/svg/vensel-1-tr.svg
+					include ../../public_html/layout/images/svg/vensel-1-bl.svg
+					include ../../public_html/layout/images/svg/vensel-1-br.svg
+				.after
+				.content
+					
+					p.center
+						span.ribbon
+						span.vensel2
+							include ../../public_html/layout/images/svg/vensel-2.svg
+					h2.center Миссия «Кремлевской школы верховой езды» - «Культура и традиции верховой езды на благо людям».
+					p Конноспортивный клуб «Кремлевская школа верховой езды» был создан в ноябре 2006 года. В число учредителей входит Федеральная служба охраны Российской Федерации. Деятельность Школы базируется на принципах любви к Родине, укрепления семейных ценностей и популяризации здорового образа жизни, активного отдыха, воспитания в детях любви к животным и природе. 
+					p КШВЕ как совместный проект государства и частного бизнеса - пример взаимодействия государства и общества на благо возрождения традиций российской государственности. «Кремлевская школа верховой езды» - это гармоничное сочетание культуры верховой езды, творчества и общения. Это удивительно теплая, позитивная, открытая и дружелюбная атмосфера. Здесь ценят, дорожат и бережно хранят традиции искусства верховой езды, приумножая и питая их своей энергией созидания.
+					p.center
+						span.vensel
+							include ../../public_html/layout/images/svg/vensel-3.svg
+		.col-md-8.col-xs-8
+			#contacts
+				span 
+					| Тел./факс: <a href="tel:84956170444">+7 (495) 617-04-44</a>
+					a.call(data-toggle="modal", data-target="#Call") перезвоните мне
+					| E-mail: <a href="mailto:info@kremlin-ksk.ru">info@kremlin-ksk.ru</a>
+				a.search(href="#")
+					include ../../public_html/layout/images/svg/search.svg
+				#search
+					input(type="text")
+			#banner
+				.stock
+					a.arrow(href="#")
+						include ../../public_html/layout/images/svg/stock-arrow.svg
+					a.content(href="#")
+						span.before
+							include ../../public_html/layout/images/svg/vensel-4.svg
+						| Специальные предложения
+						span.after
+							include ../../public_html/layout/images/svg/vensel-5.svg
+					.shadow
+				#slide
+					a.arrow(href="#")
+						include ../../public_html/layout/images/svg/stock-arrow.svg
+				img(src="/layout/images/collage.png", id="img")
+				.partners
+					.row
+						.col-md-2.col-xs-2
+							.title Наши<br>партнеры
+						.col-md-10.col-xs-10
+							img(src="/layout/images/tmp/l-1.png")
+							img(src="/layout/images/tmp/l-2.png")
+							img(src="/layout/images/tmp/l-3.png")
+							img(src="/layout/images/tmp/l-4.png")
+							img(src="/layout/images/tmp/l-5.png")
+							img(src="/layout/images/tmp/l-6.png")
+	#news.vignettes
+		.before
+			include ../../public_html/layout/images/svg/vensel-1-tl.svg
+			include ../../public_html/layout/images/svg/vensel-1-tr.svg
+			include ../../public_html/layout/images/svg/vensel-1-bl.svg
+			include ../../public_html/layout/images/svg/vensel-1-br.svg
+		.after
+		.content
+			.item
+				.date
+					span.before
+						include ../../public_html/layout/images/svg/vensel-4.svg
+					span.text 15 марта 2014
+					span.after
+						include ../../public_html/layout/images/svg/vensel-5.svg
+				.row
+					.col-md-4.col-xs-4
+						a.image(href="#")
+							img(src="/layout/images/tmp/n-1.jpg")
+					.col-md-8.col-xs-8
+						a
+							p В Кремлевской школе верховой езды состоялись Детские соревнования для всадников на пони. Или новость в пять строчек текста
+			.item
+				.date
+					span.before
+						include ../../public_html/layout/images/svg/vensel-4.svg
+					span.text 15 марта 2014
+					span.after
+						include ../../public_html/layout/images/svg/vensel-5.svg
+				.row
+					.col-md-4.col-xs-4
+						a.image(href="#")
+							img(src="/layout/images/tmp/n-2.jpg")
+					.col-md-8.col-xs-8
+						a
+							p В Кремлевской школе верховой езды состоялись Детские соревнования для всадников на пони. Или новость в пять строчек текста
+			.item
+				.date
+					span.before
+						include ../../public_html/layout/images/svg/vensel-4.svg
+					span.text 15 марта 2014
+					span.after
+						include ../../public_html/layout/images/svg/vensel-5.svg
+				.row
+					.col-md-4.col-xs-4
+						a.image(href="#")
+							img(src="/layout/images/tmp/n-3.jpg")
+					.col-md-8.col-xs-8
+						a
+							p В Кремлевской школе верховой езды состоялись Детские соревнования для всадников на пони. Или новость в пять строчек текста
+		a.more(href="#")
+			span.text 
+				span.before
+					include ../../public_html/layout/images/svg/vensel-4.svg
+				| К другим новостям
+				span.after
+					include ../../public_html/layout/images/svg/vensel-5.svg
+
+include includes/footer		

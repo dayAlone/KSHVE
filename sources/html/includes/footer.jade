@@ -1,0 +1,44 @@
+
+.modal.fade(id="Call", tabindex="-1", role="dialog", aria-labelledby="Call", aria-hidden="true")
+	.modal-dialog
+		.modal-content
+			h1 Заявка на обратный звонок
+			.row
+				.col-md-4
+					label Ваше имя *
+				.col-md-8
+					input(type="text", name="name")
+			.row
+				.col-md-4
+					label Номер телефона *
+				.col-md-8
+					input(type="text", name="phone")
+			.row
+				.col-md-4
+					label 
+						span Какой вид услуги<br>Вас заинтересовал?
+				.col-md-8
+					textarea(name="service")
+			.row
+				.col-md-4
+					small Поля, отмеченные * <br>- обязательны<br> для заполнения.
+				.col-md-8
+					p Введите код с картинки
+					.row
+						.col-md-5
+							img(src="/layout/images/captcha.png")
+						.col-md-2
+							a.refresh
+								img(src="/layout/images/refresh.png")
+						.col-md-1
+							span.here сюда
+
+						.col-md-4
+							input(name="captcha", type="text")
+			.row
+				.col-md-offset-4.col-md-8
+					input(type="submit", value="отправить")
+
+script(type="text/javascript", src="/layout/js/frontend.js")
+</body>
+</html>

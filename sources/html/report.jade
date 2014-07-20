@@ -1,0 +1,64 @@
+include includes/header
+<body>
+include includes/nav
+
+#content
+	#contacts
+		span 
+			| Тел./факс: <a href="tel:84956170444">+7 (495) 617-04-44</a>
+			a.call(data-toggle="modal", data-target="#Call") перезвоните мне
+			| E-mail: <a href="mailto:info@kremlin-ksk.ru">info@kremlin-ksk.ru</a>
+		a.search(href="#")
+			include ../../public_html/layout/images/svg/search.svg
+		#search
+			input(type="text")
+	.text.vignettes.list
+		.before
+			include ../../public_html/layout/images/svg/vensel-1-tl.svg
+			include ../../public_html/layout/images/svg/vensel-1-tr.svg
+			include ../../public_html/layout/images/svg/vensel-1-bl.svg
+			include ../../public_html/layout/images/svg/vensel-1-br.svg
+		.after
+		
+		.content.no-bottom-padding.small-top-padding
+			h1.center Отчет о деятельности
+
+		.second-nav
+			.frame
+				.shadow-top
+				.shadow-bottom
+				a(href="#") Новости
+				a(href="#") История
+				a(href="#") Отзывы
+				a(href="#").active Отчет о деятельности
+				a(href="#") Стратегические партнеры
+		.content
+			.files
+				a(href="#").pdf
+					span Кремлевская школа верховой езды открыла фестиваль «Боспорские агоны»
+				a(href="#").doc
+					span Кремлевская школа верховой езды открыла фестиваль «Боспорские агоны» или название отчета в две строки верховой езды открыла фестиваль «Боспорские агоны» верховой езды открыла фестиваль «Боспорские агоны»
+				a(href="#").docx
+					span Кремлевская школа верховой езды открыла фестиваль «Боспорские агоны» или название отчета в две строки
+				a(href="#").xls
+					span Кремлевская школа верховой езды открыла фестиваль «Боспорские агоны»
+				a(href="#").xlsx
+					span Кремлевская школа верховой езды открыла фестиваль «Боспорские агоны»
+				a(href="#").ppt
+					span Кремлевская школа верховой езды открыла фестиваль «Боспорские агоны»
+				a(href="#").pptx
+					span Кремлевская школа верховой езды открыла фестиваль «Боспорские агоны» или название отчета в две строки
+				a(href="#").zip
+					span Кремлевская школа верховой езды открыла фестиваль «Боспорские агоны» или название отчета в две строки
+				a(href="#").rar
+					span Кремлевская школа верховой езды открыла фестиваль «Боспорские агоны»
+				a(href="#").movie
+					span Кремлевская школа верховой езды открыла фестиваль «Боспорские агоны»
+
+		.pages
+			a(href="#").active 1
+			a(href="#") 2
+			a(href="#") 3
+			a(href="#") 4
+
+include includes/footer

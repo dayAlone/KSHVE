@@ -1,0 +1,78 @@
+include includes/header
+<body>
+include includes/nav
+#content
+	#contacts
+		span 
+			| Тел./факс: <a href="tel:84956170444">+7 (495) 617-04-44</a>
+			a.call(data-toggle="modal", data-target="#Call") перезвоните мне
+			| E-mail: <a href="mailto:info@kremlin-ksk.ru">info@kremlin-ksk.ru</a>
+		a.search(href="#")
+			include ../../public_html/layout/images/svg/search.svg
+		#search
+			input(type="text")
+	.text.vignettes.list
+		.before
+			include ../../public_html/layout/images/svg/vensel-1-tl.svg
+			include ../../public_html/layout/images/svg/vensel-1-tr.svg
+			include ../../public_html/layout/images/svg/vensel-1-bl.svg
+			include ../../public_html/layout/images/svg/vensel-1-br.svg
+		.after
+		
+		.content.no-bottom-padding.small-top-padding
+			h1.center История
+
+		.second-nav
+			.frame
+				.shadow-top
+				.shadow-bottom
+				a(href="#") Новости
+				a(href="#").active История
+				a(href="#") Отзывы
+				a(href="#") Отчет о деятельности
+				a(href="#") Стратегические партнеры
+
+		.content
+			p.center
+				img(src="/layout/images/tmp/1.png")
+			.history
+				.triggers
+					include ../../public_html/layout/images/svg/vensel-6.svg
+					a(href="#").active 1994
+					a(href="#") 1998
+					a(href="#") 2003
+					a(href="#") 2006
+					a(href="#") 2007
+					a(href="#") 2008
+					a(href="#") 2009
+					a(href="#") 2010
+					a(href="#") 2011
+					a(href="#") 2012
+					a(href="#") 2013
+					include ../../public_html/layout/images/svg/vensel-7.svg
+				.content
+					.item(data-year="1994").active
+						p Создание "Русского конно-спортивного клуба"
+					.item(data-year="1998")
+						p Формирование системы индивидуального обучения искусству верховой езды
+					.item(data-year="2003")
+						p Собственная конюшня, соответствующая высоким европейским стандартам
+					.item(data-year="2006")
+						p 15 ноября 2006 года при участии ФСО России и Финансовой корпорации "УРАЛСИБ" создана Автономная некоммерческая организация <Кремлевская школа верховой езды>.
+					.item(data-year="2007")
+						p Начата программа обучения Детской церемониальной группы. 
+					.item(data-year="2008")
+						p 15 февраля 2008 года Школой начата программа развития конноспортивного комплекса Кавалерийского почётного эскорта Президентского полка ФСО России.
+					.item(data-year="2009")
+						p В Школе обучается более 300 всадников.
+					.item(data-year="2010")
+						p Дебют в рамках Военно-музыкального фестиваля <Спасская башня> Совместной команды по военно-прикладным видам конного спорта Кавалерийского почетного эскорта Президентского полка и Кремлевской школы верховой езды.
+					.item(data-year="2011")
+						p Выступление Школы в рамках Фестиваля конного искусства в г. Грозный
+					.item(data-year="2012")
+						p Совместная команда Кремлевской школы верховой езды и Кавалерийского почетного эскорта Президентского полка принимала участие в праздновании Бриллиантового юбилея коронации Королевы Елизаветы II в Виндзоре, Великобритания
+					.item(data-year="2013")
+						p Школа впервые приняла участие в проекте <Спасская башня детям>, включая организацию Всероссийских детских соревнований для всадников на пони по выездке и конкуру на <Кубок Спасской Башни>.
+			.divider
+
+include includes/footer
