@@ -10688,6 +10688,7 @@ a:hover {
 #nav .footer .social a svg {
   display: inline-block;
 
+  width: auto;
   max-width: 25px;
   max-height: 20px;
 
@@ -10802,9 +10803,6 @@ a:hover {
 }
 #nav .content .social {
   margin: 8px 0;
-}
-#nav .content .social a {
-  margin: 0 12px;
 }
 @media screen and (max-width: 1366px) {
   #nav .content .social a {

@@ -248,6 +248,7 @@ a:hover {
   display: inline-block;
   max-height: 20px;
   max-width: 25px;
+  width: auto;
 }
 #nav .footer .social a svg path {
   fill: #fff;
@@ -350,9 +351,6 @@ a:hover {
 }
 #nav .content .social {
   margin: 8px 0;
-}
-#nav .content .social a {
-  margin: 0 12px;
 }
 @media screen and (max-width: 1366px) {
   #nav .content .social a {
