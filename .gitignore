@@ -7,3 +7,5 @@ bitrix/config.codekit
 log.txt
 
 *.html
+
+public_html/0.zip

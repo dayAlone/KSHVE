@@ -1,6 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Отчет о деятельности");
+$APPLICATION->SetPageProperty('line', "false");
 	$APPLICATION->IncludeComponent("bitrix:news.list", "reports", 
 		array(
 			"IBLOCK_ID"            => 8,

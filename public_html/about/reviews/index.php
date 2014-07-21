@@ -1,6 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Отзывы");
+$APPLICATION->SetPageProperty('line', "false");
 	$APPLICATION->IncludeComponent("bitrix:news.list", "reviews", 
 		array(
 			"IBLOCK_ID"            => 7,

@@ -1,6 +1,6 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $this->setFrameMode(true);
-$APPLICATION->SetPageProperty('line', "false");
+if(count($arResult['ITEMS'])>0):
 ?>
 <div class="list">
   <?php
@@ -17,8 +17,10 @@ $APPLICATION->SetPageProperty('line', "false");
         ?>
             <div class="col-md-<?=12/$col?>">
               <div class="item">
-                  <<?=$tag?> <?($tag=='a'?"href='".$item['DETAIL_PAGE_URL']."'":"")?> style="background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)" class="image"></<?=$tag?>>
-                  <<?=$tag?> <?($tag=='a'?"href='".$item['DETAIL_PAGE_URL']."'":"")?> class="title"><?=$item['NAME']?></<?=$tag?>>
+                  <? if(strlen($item['PREVIEW_PICTURE']['SRC'])>0): ?>
+                    <<?=$tag?> <?=($tag=='a'?"href='".$item['DETAIL_PAGE_URL']."'":"")?> style="background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)" class="image"></<?=$tag?>>
+                  <? endif;?>
+                  <<?=$tag?> <?=($tag=='a'?"href='".$item['DETAIL_PAGE_URL']."'":"")?> class="title"><?=$item['NAME']?></<?=$tag?>>
                   <p><?=$item['PREVIEW_TEXT']?></p>
               </div>
             </div>
@@ -29,4 +31,5 @@ $APPLICATION->SetPageProperty('line', "false");
 </div>
 <?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
   <?=$arResult["NAV_STRING"]?>
+<?endif;?>
 <?endif;?>

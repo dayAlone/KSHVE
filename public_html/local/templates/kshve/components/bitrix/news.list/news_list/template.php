@@ -1,6 +1,5 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $this->setFrameMode(true);
-$APPLICATION->SetPageProperty('line', "false");
 ?>
 <div class="news">
 <?foreach ($arResult['ITEMS'] as $key => &$item):?>
