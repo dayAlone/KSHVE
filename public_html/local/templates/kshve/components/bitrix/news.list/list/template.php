@@ -17,8 +17,8 @@ $APPLICATION->SetPageProperty('line', "false");
         ?>
             <div class="col-md-<?=12/$col?>">
               <div class="item">
-                  <<?=$tag?> style="background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)" class="image"></<?=$tag?>>
-                  <<?=$tag?> class="title"><?=$item['NAME']?></<?=$tag?>>
+                  <<?=$tag?> <?($tag=='a'?"href='".$item['DETAIL_PAGE_URL']."'":"")?> style="background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)" class="image"></<?=$tag?>>
+                  <<?=$tag?> <?($tag=='a'?"href='".$item['DETAIL_PAGE_URL']."'":"")?> class="title"><?=$item['NAME']?></<?=$tag?>>
                   <p><?=$item['PREVIEW_TEXT']?></p>
               </div>
             </div>

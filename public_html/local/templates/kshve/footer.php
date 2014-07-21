@@ -3,6 +3,26 @@
         <div class="vensel-final">
           <?=svg('end-vensel-left')?><div class="center"></div><?=svg('end-vensel-right')?>
         </div>
+        <?
+        $APPLICATION->IncludeComponent(
+        	"bitrix:asd.share.buttons", 
+        	"", 
+        	array(
+            "ASD_ID"         => $_REQUEST["id"],
+            "ASD_TITLE"      => $APPLICATION->GetTitle().(!$isIndex?" :: Кремлевская школа верховой езды":""),
+            "ASD_URL"        => 'http://'.$_SERVER['HTTP_HOST'].$APPLICATION->GetCurUri(),
+            "ASD_PICTURE"    => $_REQUEST["picture"],
+            "ASD_TEXT"       => $_REQUEST["text"],
+            "ASD_LINK_TITLE" => "Расшарить в #SERVICE#",
+            "ASD_SITE_NAME"  => "",
+        		"ASD_INCLUDE_SCRIPTS" => array(
+        			0 => "FB_LIKE",
+        			1 => "VK_LIKE",
+        			2 => "TWITTER",
+        		)
+        	),
+        	false
+        );?>
         <?endif;?>
         </div>
       </div>

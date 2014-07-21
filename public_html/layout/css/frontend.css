@@ -12868,3 +12868,24 @@ a:hover {
 .modal-dialog .modal-content textarea {
   height: 137px;
 }
+#asd_share_buttons {
+  float: left;
+
+  width: 100%;
+  margin-top: -10px;
+  padding-bottom: 5px;
+
+  text-align: center;
+}
+#asd_social_likes {
+  margin: 0 auto;
+}
+#asd_social_likes tr {
+  line-height: 25px;
+}
+#asd_social_likes tr iframe,
+#asd_social_likes tr div {
+  display: inline-block;
+
+  vertical-align: middle;
+}

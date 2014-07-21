@@ -2151,3 +2151,21 @@ a:hover {
 .modal-dialog .modal-content textarea {
   height: 137px;
 }
+#asd_share_buttons {
+  text-align: center;
+  float: left;
+  width: 100%;
+  padding-bottom: 5px;
+  margin-top: -10px;
+}
+#asd_social_likes {
+  margin: 0 auto;
+}
+#asd_social_likes tr {
+  line-height: 25px;
+}
+#asd_social_likes tr iframe,
+#asd_social_likes tr div {
+  display: inline-block;
+  vertical-align: middle;
+}
