@@ -70,13 +70,16 @@ $APPLICATION->SetPageProperty('body_class', "index");
             </div>
             <div class="col-md-10 col-xs-10">
             	<?php
+                global $partners_filter;
+                $partners_filter = array("!PROPERTY_INDEX"=>false);
 			          $APPLICATION->IncludeComponent("bitrix:news.list", "partners", 
 			          array(
 			          "IBLOCK_ID"            => 2,
 			          "NEWS_COUNT"           => "0",
 			          "SORT_BY1"             => "SORT",
 			          "SORT_ORDER1"          => "ASC",
-			          "PROPERTY_CODE"        => Array("LINK"),
+                "FILTER_NAME"          => "partners_filter",
+			          "PROPERTY_CODE"        => Array("LINK", "LOGO"),
 			          "DETAIL_URL"           => "#",
 			          "CACHE_TYPE"           => "A",
 			          "DISPLAY_PANEL"        => "N",

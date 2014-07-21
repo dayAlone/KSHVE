@@ -1,8 +1,9 @@
-    <?if(!$isIndex):?>
+    <?if(!$isIndex):
+        if(!$APPLICATION->GetPageProperty('line')):?>
         <div class="vensel-final">
           <?=svg('end-vensel-left')?><div class="center"></div><?=svg('end-vensel-right')?>
         </div>
-        
+        <?endif;?>
         </div>
       </div>
     <?endif;?>

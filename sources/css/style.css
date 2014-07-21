@@ -503,6 +503,10 @@ a:hover {
     height: 60px;
   }
 }
+#content .content+.third-nav {
+  margin-top: -70px;
+  padding-bottom: 0;
+}
 #content .third-nav,
 #content .pages {
   float: left;
@@ -549,6 +553,7 @@ a:hover {
 #content .third-nav span:hover,
 #content .pages span:hover {
   background: transparent;
+  color: #000;
 }
 #content > .text {
   float: left;
@@ -752,7 +757,7 @@ a:hover {
 #content > .text .list .item:hover {
   border-color: #2e5fa7;
 }
-#content > .text .list .item a.title {
+#content > .text .list .item .title {
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -770,27 +775,29 @@ a:hover {
   margin-bottom: 13px;
 }
 @media screen and (max-width: 1280px) {
-  #content > .text .list .item a.title {
+  #content > .text .list .item .title {
     font-size: 20px;
     line-height: 20px;
   }
 }
 @media screen and (max-width: 1024px) {
-  #content > .text .list .item a.title {
+  #content > .text .list .item .title {
     font-size: 18px;
     line-height: 18px;
   }
 }
-#content > .text .list .item a.title:hover {
+#content > .text .list .item .title:hover {
   color: #2e5fa7;
 }
 #content > .text .list .item .image {
   float: left;
   width: 170px;
   height: 170px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
   margin-right: 20px;
   margin-bottom: 5px;
 }
@@ -1168,13 +1175,6 @@ a:hover {
   -moz-background-size: auto 55px;
   background-size: auto 55px;
 }
-#content .files a[href$=movie],
-#content .files a.movie {
-  background: url("/layout/images/movie.png") top left no-repeat;
-  -webkit-background-size: auto 55px;
-  -moz-background-size: auto 55px;
-  background-size: auto 55px;
-}
 #content .files a[href$=xls],
 #content .files a.xls {
   background: url("/layout/images/xls.png") top left no-repeat;
@@ -1199,6 +1199,34 @@ a:hover {
 #content .files a[href$=rar],
 #content .files a.rar {
   background: url("/layout/images/rar.png") top left no-repeat;
+  -webkit-background-size: auto 55px;
+  -moz-background-size: auto 55px;
+  background-size: auto 55px;
+}
+#content .files a[href$=mp4],
+#content .files a.mp4 {
+  background: url("/layout/images/movie.png") top left no-repeat;
+  -webkit-background-size: auto 55px;
+  -moz-background-size: auto 55px;
+  background-size: auto 55px;
+}
+#content .files a[href$=mov],
+#content .files a.mov {
+  background: url("/layout/images/movie.png") top left no-repeat;
+  -webkit-background-size: auto 55px;
+  -moz-background-size: auto 55px;
+  background-size: auto 55px;
+}
+#content .files a[href$=flv],
+#content .files a.flv {
+  background: url("/layout/images/movie.png") top left no-repeat;
+  -webkit-background-size: auto 55px;
+  -moz-background-size: auto 55px;
+  background-size: auto 55px;
+}
+#content .files a[href$=avi],
+#content .files a.avi {
+  background: url("/layout/images/movie.png") top left no-repeat;
   -webkit-background-size: auto 55px;
   -moz-background-size: auto 55px;
   background-size: auto 55px;

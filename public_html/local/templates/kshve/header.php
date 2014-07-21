@@ -87,6 +87,6 @@
 			        ),
 			    false);
 			?>
-    		<div class="content">
+    			<div class="content">
 		<?endif;?>
 		

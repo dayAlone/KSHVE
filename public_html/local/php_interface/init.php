@@ -40,6 +40,9 @@
 		ob_end_clean();
 	   	$content = str_replace($matches[0], $gallery, $content);
 	   endif;
+
+	   $pattern = '/(<div class=\"content\">(\s+)<\/div>|<div>(\s+)<\/div>)/i';
+	   $content = preg_replace($pattern, "", $content);
 	}
 
 	function svg($value='')

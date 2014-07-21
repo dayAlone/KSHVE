@@ -349,6 +349,9 @@ a
 			line-height 60px
 			.frame
 				height 60px
+	.content+.third-nav
+		margin-top -70px
+		padding-bottom 0
 	.third-nav, .pages
 		full-width()
 		text-align center
@@ -375,6 +378,7 @@ a
 			padding 2px 0 0
 			&:hover
 				background transparent
+				color black
 	> .text
 		full-width()
 		position relative
@@ -468,7 +472,7 @@ a
 				transition()
 				&:hover
 					border-color blue
-				a.title
+				.title
 					transition()
 					display block
 					font-size 22px
@@ -487,7 +491,9 @@ a
 					float left
 					width 170px
 					height 170px
-					background-size cover
+					background-size contain
+					background-position center center
+					background-repeat no-repeat
 					margin-right 20px
 					margin-bottom 5px
 				p
@@ -715,9 +721,12 @@ a
 			color #3b3538
 			margin-bottom 30px
 			padding-left 75px
-			for file in pdf doc docx ppt pptx movie xls xlsx zip rar
+			for file in pdf doc docx ppt pptx xls xlsx zip rar
 				&[href$={file}], &.{file}
 					b(file".png", top left no-repeat, null, auto 55px )
+			for file in mp4 mov flv avi
+				&[href$={file}], &.{file}
+					b("movie.png", top left no-repeat, null, auto 55px )
 			span
 				display inline-block
 				vertical-align middle

@@ -1,43 +1,24 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $this->setFrameMode(true);
+$APPLICATION->SetPageProperty('line', "false");
 ?>
 <div class="news">
 <?foreach ($arResult['ITEMS'] as $key => &$item):?>
-	<div class="item">
-        <div class="date">
-        	<span class="before"><?=svg('vensel-4')?></span>
-        	<span class="text"><?=russian_date($item['DATE'])?></span>
-        	<span class="after"><?=svg('vensel-5')?></span>
-        </div>
-        <div class="row">
-        <? if(strlen($item['PREVIEW_PICTURE']['SRC'])>0):?>
-          <div class="col-md-4 col-xs-4">
-          	<a href="<?=$item['DETAIL_PAGE_URL']?>" class="image">
-          		<img src="<?=$item['PREVIEW_PICTURE']['SRC']?>">
-          	</a>
-          </div>
-          <div class="col-md-8 col-xs-8">
-        <? else:?>
-		  <div class="col-md-12 col-xs-12">
-        <?endif;?>
-          	<a href="<?=$item['DETAIL_PAGE_URL']?>">
-              <p><?=$item['PREVIEW_TEXT']?></p>
-            </a>
-          </div>
-        </div>
-     </div>
-     <div class="item">
+	  <div class="item">
         <div class="frame">
         <? if(strlen($item['PREVIEW_PICTURE']['SRC'])>0):?>
-          <a style="background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)" class="image"></a>
+          <a style="background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)" class="image" href="<?=$item['DETAIL_PAGE_URL']?>"></a>
         <? endif ?>
-          <div class="date"><svg width="31" height="38" viewBox="0 0 31 38" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>vensel-4</title><path d="M7.1 17.251c-2.4.4-4.8 1-7.1 1.9 2.3.8 4.7 1.5 7.1 1.9 6.3 1 12.5.3 18.1-1.9-5.6-2.2-11.8-2.9-18.1-1.9zm.3 1.9c3.7-.6 7.3-.6 10.8 0-3.5.5-7.1.6-10.8 0zm21.5-11.4h-.1c-.4-2.1-1.2-4.2-3.3-5.8-1.2-.8-3-1.2-4.9-1-2 .2-3.6 1.1-4.5 2.3-1.3 1.8-1.6 4-.8 5.9.6 1.5 1.9 2.4 3.4 2.6 2 .3 3.8-1.1 4.2-3 .3-1.5-.8-2.8-2-3-1.1-.2-2 .4-2.2 1.5-.1.5.2 1 .7 1.1.5.1 1-.2 1.1-.7 0 0 .2 0 .3.2.1.1.2.3.2.6-.2.8-.9 1.7-2.1 1.5-1.2-.1-1.7-1-1.9-1.5-.5-1.2-.3-2.8.6-4 .6-.8 1.8-1.4 3.2-1.6 1.4-.2 2.7 0 3.5.6 2.2 1.6 2.5 3.8 2.9 6.4l.1.4.1.3 1.4 8.6-1.4 8.6c-.1.1-.1.2-.1.3l-.1.4c-.4 2.6-.8 4.8-2.9 6.4-.8.6-2.1.8-3.5.6-1.4-.2-2.6-.8-3.2-1.6-.9-1.2-1.1-2.8-.6-4 .2-.5.8-1.3 1.9-1.5 1.2-.2 2 .7 2.1 1.5.1.3-.1.5-.2.6-.2.2-.4.2-.3.2-.1-.5-.6-.8-1.1-.8-.5.1-.8.6-.7 1.1.2 1.1 1.1 1.7 2.2 1.5 1.2-.2 2.3-1.5 2-3-.4-2-2.2-3.3-4.2-3-1.5.2-2.8 1.1-3.4 2.6-.8 1.8-.5 4.1.8 5.9.9 1.2 2.5 2.1 4.5 2.3 1.9.2 3.7-.1 4.9-1 2.2-1.6 2.9-3.7 3.3-5.8h.1l1.6-10.4v-2l-1.6-10.3z" sketch:type="MSShapeGroup" fill="#231F20"/></svg><svg width="32" height="38" viewBox="0 0 32 38" xmlns="http://www.w3.org/2000/svg" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns"><title>vensel-5</title><path d="M24.1 20.7c2.4-.4 4.8-1 7.1-1.9-2.3-.8-4.7-1.5-7.1-1.9-6.3-1-12.5-.3-18.1 1.9 5.7 2.3 11.8 2.9 18.1 1.9zm-.3-1.8c-3.7.6-7.3.6-10.8 0 3.6-.6 7.2-.6 10.8 0zm-21.5 11.4h.1c.4 2.1 1.2 4.2 3.3 5.8 1.2.8 3 1.2 4.9 1 2-.2 3.6-1.1 4.5-2.3 1.3-1.8 1.6-4.1.8-5.9-.6-1.5-1.9-2.4-3.4-2.6-2-.2-3.8 1.1-4.2 3-.3 1.5.8 2.8 2 3 1.1.2 2-.4 2.2-1.5.1-.5-.2-1-.8-1.1-.5-.1-1 .2-1.1.7 0 0-.2 0-.3-.2-.1-.1-.2-.3-.2-.6.2-.8.9-1.7 2.1-1.5 1.2.1 1.7 1 1.9 1.5.5 1.2.3 2.8-.6 4-.6.8-1.8 1.4-3.2 1.6-1.4.2-2.8-.1-3.5-.6-2.2-1.6-2.5-3.8-2.9-6.4v-.4l-.1-.3-1.4-8.6 1.4-8.6c.1-.1.1-.2.1-.3v-.4c.4-2.6.8-4.8 2.9-6.4.8-.6 2.1-.8 3.5-.6 1.4.2 2.6.8 3.2 1.6.9 1.2 1.1 2.8.6 4-.2.5-.8 1.3-1.9 1.5-1.2.2-2-.7-2.1-1.5 0-.3.1-.5.2-.6.2-.2.4-.2.3-.2.1.5.6.8 1.1.8.5-.1.9-.6.8-1.1-.2-1.1-1.1-1.7-2.2-1.5-1.2.2-2.3 1.5-2 3 .4 2 2.2 3.3 4.2 3 1.5-.2 2.8-1.1 3.4-2.6.8-1.8.5-4.1-.8-5.9-.9-1.2-2.5-2.1-4.5-2.3-1.9-.2-3.7.1-4.9 1-2.2 1.6-2.9 3.7-3.3 5.8h-.1l-1.6 10.4v2l1.6 10.3z" sketch:type="MSShapeGroup" fill="#231F20"/></svg>
+          <div class="date"><?=svg('vensel-4')?><?=svg('vensel-5')?>
             <div class="line"></div>
-            <span class="text">15 марта 2014</span>
+            <span class="text"><?=russian_date($item['DATE'])?></span>
           </div>
-          <a class="title">Кремлевская школа верховой езды открыла фестиваль «Боспорские агоны»</a>
-          <p>В Кремлевской школе верховой езды состоялись Детские соревнования для всадников на пони. Или новость в пять строчек текста. Здесь выводится анонс при его наличии в системе.</p>
+          <a href="<?=$item['DETAIL_PAGE_URL']?>" class="title"><?=$item['NAME']?></a>
+          <p><?=$item['PREVIEW_TEXT']?></p>
         </div>
       </div>
 <?endforeach;?>
 </div>
+<?if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
+  <?=$arResult["NAV_STRING"]?>
+<?endif;?>
