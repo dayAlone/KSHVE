@@ -10430,6 +10430,11 @@ body {
 
   font-family: 'Georgia', 'Times New Roman', serif;
 }
+body.logos #content .list .item .image {
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+}
 .center {
   text-align: center;
 }
@@ -11315,9 +11320,6 @@ a:hover {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
-}
-#content > .text .list .item .image.logos {
-  background-position: contain;
 }
 #content > .text .list .item p {
   color: #253f56;
