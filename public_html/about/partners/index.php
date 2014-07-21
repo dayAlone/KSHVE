@@ -2,6 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Стратегические партнеры");
 $APPLICATION->SetPageProperty('line', "false");
+$APPLICATION->SetPageProperty('body_class', "logos");
 ?>
 	</div>
   		<?

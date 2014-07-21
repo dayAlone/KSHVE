@@ -793,13 +793,16 @@ a:hover {
   float: left;
   width: 170px;
   height: 170px;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   margin-right: 20px;
   margin-bottom: 5px;
+}
+#content > .text .list .item .image.logos {
+  background-position: contain;
 }
 #content > .text .list .item p {
   font-size: 14px;

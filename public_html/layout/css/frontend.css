@@ -11312,9 +11312,12 @@ a:hover {
 
   background-repeat: no-repeat;
   background-position: center center;
-  -webkit-background-size: contain;
-  -moz-background-size: contain;
-  background-size: contain;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+#content > .text .list .item .image.logos {
+  background-position: contain;
 }
 #content > .text .list .item p {
   color: #253f56;
