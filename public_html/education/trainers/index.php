@@ -2,6 +2,7 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Тренерский состав");
 $APPLICATION->SetPageProperty('line', "false");
+$APPLICATION->SetPageProperty('body_class', "trainers");
 ?>
 </div>
 <?

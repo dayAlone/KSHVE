@@ -26,6 +26,9 @@ body.logos #content .list .item .image {
   -moz-background-size: contain;
   background-size: contain;
 }
+body.trainers #content .list .item .image {
+  background-position: top center;
+}
 .center {
   text-align: center;
 }
