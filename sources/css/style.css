@@ -2166,6 +2166,7 @@ a:hover {
 }
 #asd_social_likes {
   margin: 0 auto;
+  margin-bottom: 30px;
 }
 #asd_social_likes tr {
   line-height: 25px;
