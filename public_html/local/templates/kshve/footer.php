@@ -1,5 +1,5 @@
     <?if(!$isIndex):
-        if(!$APPLICATION->GetPageProperty('line')):?>
+        if($APPLICATION->GetPageProperty('line')=="false"):?>
         <div class="vensel-final">
           <?=svg('end-vensel-left')?><div class="center"></div><?=svg('end-vensel-right')?>
         </div>

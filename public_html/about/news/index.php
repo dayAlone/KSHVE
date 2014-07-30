@@ -29,6 +29,7 @@ $APPLICATION->SetPageProperty('line', "false");
 	}
 
 	if($detail):
+		$APPLICATION->SetPageProperty('line', "true");
 		$APPLICATION->IncludeComponent("bitrix:news.detail","news",Array(
 			"IBLOCK_ID"     => "1",
 			"ELEMENT_CODE"  => $_REQUEST['ELEMENT_CODE'],
