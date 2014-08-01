@@ -57,7 +57,6 @@ $APPLICATION->SetPageProperty('line', "false");
 	);
 	$display_pages = "Y";
 	$news_count    = 8;
-	$section       = false;
 	$APPLICATION->IncludeComponent("bitrix:news.list", "news_list", 
 		array(
 			"IBLOCK_ID"            => 1,
