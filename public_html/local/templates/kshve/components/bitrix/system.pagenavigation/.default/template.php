@@ -1,7 +1,6 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $this->setFrameMode(true);
-var_dump($arResult);
-if($arResult["nStartPage"]>$arResult["nEndPage"]):
+if($arResult["NavPageCount"]>1):
 ?>
 <div class="pages">
 	<?
