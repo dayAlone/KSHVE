@@ -52,8 +52,6 @@ $APPLICATION->SetPageProperty('line', "false");
 		)	
 		);
 	endif;
-
-
 	global $news_filter;
 	$news_filter = array(
 	"<=PROPERTY_DATE" => date('Y-m-d')." 23:59:59"

@@ -19,7 +19,7 @@ $this->setFrameMode(true);
 <?endforeach;?>
 </div>
 <?
-var_dump($arParams["DISPLAY_BOTTOM_PAGER"]);
+var_dump($arResult["NAV_STRING"]);
 if($arParams["DISPLAY_BOTTOM_PAGER"]):?>
   <?=$arResult["NAV_STRING"]?>
 <?endif;?>
