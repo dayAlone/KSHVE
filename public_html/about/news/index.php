@@ -6,6 +6,9 @@ $APPLICATION->SetPageProperty('line', "false");
 </div>
 <?
 	CModule::IncludeModule("iblock");
+	$display_pages = "Y";
+	$news_count    = 8;
+	$section       = false;
 	$detail        = true;
 	$arSort = array("SORT" => "ASC");
 	$arFilter = array("IBLOCK_ID" => 1, "NAME"=> array($_REQUEST['ELEMENT_CODE'],date('Y')));
@@ -55,8 +58,10 @@ $APPLICATION->SetPageProperty('line', "false");
 	$news_filter = array(
 	"<=PROPERTY_DATE" => date('Y-m-d')." 23:59:59"
 	);
-	$display_pages = "Y";
-	$news_count    = 8;
+	var_dump($news_count);
+	var_dump($section);
+	var_dump($detail);
+	var_dump($display_pages);
 	$APPLICATION->IncludeComponent("bitrix:news.list", "news_list", 
 		array(
 			"IBLOCK_ID"            => 1,
