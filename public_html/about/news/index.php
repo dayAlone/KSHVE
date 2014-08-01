@@ -58,10 +58,6 @@ $APPLICATION->SetPageProperty('line', "false");
 	$news_filter = array(
 	"<=PROPERTY_DATE" => date('Y-m-d')." 23:59:59"
 	);
-	var_dump($news_count);
-	var_dump($section);
-	var_dump($detail);
-	var_dump($display_pages);
 	$APPLICATION->IncludeComponent("bitrix:news.list", "news_list", 
 		array(
 			"IBLOCK_ID"            => 1,
