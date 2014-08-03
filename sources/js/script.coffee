@@ -158,18 +158,23 @@ $(document).ready ->
 				$('.stock .arrow, .stock .shadow').show()
 		e.preventDefault()
 
-	$('#contacts input[type="text"]').on 'focusout', ()->
-		$('#contacts').toggleClass('open')
-
 	$('#contacts a.search').click (e)->
-		$('#contacts').toggleClass('open')
-		$('#contacts input[type="text"]').focus()
+		console.log $('#contacts').hasClass('open')
+		if !$('#contacts').hasClass('open')
+			$('#contacts').addClass('open')
+			$('#contacts input[type="text"]').focus()
+		else
+			$('#contacts form').submit()
 		e.preventDefault()
 
 	$('#Call .refresh').click (e)->
 		getCaptcha()
 		e.preventDefault()
 	
+	$(document).on 'click', (e)->
+		if $('#contacts').hasClass('open') && $(e.target).parents('#contacts').length == 0
+			$('#contacts').removeClass 'open'
+
 	$('input[name="phone"]').mask('+7 (000) 000 00 00');
 
 	$('#Call form').submit (e)->

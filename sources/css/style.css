@@ -2175,3 +2175,24 @@ a:hover {
 .parsley-errors-list {
   display: none;
 }
+.search-page hr {
+  border-color: #c7cdd3;
+}
+.search-page hr:first-of-type {
+  display: none;
+}
+.search-page a {
+  font-size: 22px;
+  font-family: 'Oranienbaum';
+}
+.search-page p:last-of-type b {
+  font-size: 12px;
+}
+.search-page p:last-of-type a {
+  font-size: 12px;
+  font-family: 'Georgia';
+}
+.search-page form,
+.search-page br {
+  display: none;
+}

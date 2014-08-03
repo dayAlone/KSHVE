@@ -17121,17 +17121,24 @@ if ('undefined' !== typeof window.ParsleyValidator)
       }
       return e.preventDefault();
     });
-    $('#contacts input[type="text"]').on('focusout', function() {
-      return $('#contacts').toggleClass('open');
-    });
     $('#contacts a.search').click(function(e) {
-      $('#contacts').toggleClass('open');
-      $('#contacts input[type="text"]').focus();
+      console.log($('#contacts').hasClass('open'));
+      if (!$('#contacts').hasClass('open')) {
+        $('#contacts').addClass('open');
+        $('#contacts input[type="text"]').focus();
+      } else {
+        $('#contacts form').submit();
+      }
       return e.preventDefault();
     });
     $('#Call .refresh').click(function(e) {
       getCaptcha();
       return e.preventDefault();
+    });
+    $(document).on('click', function(e) {
+      if ($('#contacts').hasClass('open') && $(e.target).parents('#contacts').length === 0) {
+        return $('#contacts').removeClass('open');
+      }
     });
     $('input[name="phone"]').mask('+7 (000) 000 00 00');
     $('#Call form').submit(function(e) {
