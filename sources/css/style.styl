@@ -1100,9 +1100,12 @@ a
 			padding 0 10px
 			font-size 14px
 			line-height 18px
-			img
-				max-width 120px
-				max-height 90px
+			.image
+				full-width()
+				height 110px
+				background-size cover
+				background-position center center
+				background-repeat no-repeat
 
 			@media screen and (max-width: 1280px)
 				margin-bottom 7px
@@ -1114,30 +1117,23 @@ a
 				p, a p
 					width 100% !important
 					padding 0 !important
+			.col-md-4
+				padding-right 0
 			p, a p
 				full-width()
-				width 95%
 				color #333
 				font-size 14px
 				line-height 18px
-				padding-left 13px
 				transition()
 				&:hover
 					color #3662a5
-				@media screen and (max-width: 1680px)
-					width 110%
-					float right
-				@media screen and (max-width: 1620px)
-					width 100%
-					padding-left 18px
-				@media screen and (max-width: 1280px)
-					float right
-					width 110%
+
+					
 				@media screen and (max-width: 1024px)
-					width 100%
+					
 					padding-left 18px
 				@media screen and (max-width: 992px)
-					padding-left 0
+					
 					font-size 12px
 	.date, .more
 		position relative

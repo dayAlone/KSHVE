@@ -11,9 +11,7 @@ $this->setFrameMode(true);
         <div class="row">
         <? if(strlen($item['PREVIEW_PICTURE']['SRC'])>0):?>
           <div class="col-md-4 col-xs-4">
-          	<a href="<?=$item['DETAIL_PAGE_URL']?>" class="image">
-          		<img src="<?=$item['PREVIEW_PICTURE']['SRC']?>">
-          	</a>
+          	<a href="<?=$item['DETAIL_PAGE_URL']?>" class="image" style="background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)"></a>
           </div>
           <div class="col-md-8 col-xs-8">
         <? else:?>

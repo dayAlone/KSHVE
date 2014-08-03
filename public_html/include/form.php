@@ -37,7 +37,7 @@ if($result['status'] == 'ok') {
 		$un = strtoupper(uniqid(time()));
 		$headers = "MIME-Version: 1.0;$EOL";   
 		$headers .= "Content-Type: multipart/mixed; boundary=\"$boundary\"$EOL";  
-		$headers .= "From: Сайт ".$_SERVER['HTTP_HOST']." <mailer@".$_SERVER['HTTP_HOST'].">\r\n"; 
+		$headers .= "From: ".$_SERVER['HTTP_HOST']." <mailer@".$_SERVER['HTTP_HOST'].">\r\n"; 
 		$multipart  = "--$boundary$EOL";   
 		$multipart .= "Content-Type: text/html; charset=UTF-8$EOL";   
 		$multipart .= "Content-Transfer-Encoding: base64$EOL";   
