@@ -12820,6 +12820,12 @@ a:hover {
 
   font-size: 16px;
 }
+.modal-dialog .modal-content .captcha_img {
+  border: 1px solid #ccc;
+}
+.modal-dialog .modal-content .success {
+  display: none;
+}
 .modal-dialog .modal-content p {
   font-size: 16px;
 }
@@ -12873,6 +12879,10 @@ a:hover {
 .modal-dialog .modal-content textarea:focus {
   outline: 0;
 }
+.modal-dialog .modal-content input[type="text"].parsley-error,
+.modal-dialog .modal-content textarea.parsley-error {
+  border: 1px solid #f00;
+}
 .modal-dialog .modal-content textarea {
   height: 137px;
 }
@@ -12897,4 +12907,7 @@ a:hover {
   display: inline-block;
 
   vertical-align: middle;
+}
+.parsley-errors-list {
+  display: none;
 }

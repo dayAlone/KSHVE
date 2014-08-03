@@ -1,5 +1,5 @@
 (function() {
-  var animate, autoHeight, delay, init_popup, size, vignettes;
+  var animate, autoHeight, delay, getCaptcha, init_popup, setCaptcha, size, vignettes;
 
   delay = function(ms, func) {
     return setTimeout(func, ms);
@@ -111,6 +111,17 @@
     });
   };
 
+  getCaptcha = function() {
+    return $.get('/include/captcha.php', function(data) {
+      return setCaptcha(data);
+    });
+  };
+
+  setCaptcha = function(code) {
+    $('input[name=captcha_code]').val(code);
+    return $('.captcha_img').attr('src', '/include/captcha.php?captcha_sid=' + code);
+  };
+
   $(document).ready(function() {
     var x;
     init_popup();
@@ -180,6 +191,27 @@
     $('#contacts a.search').click(function(e) {
       $('#contacts').toggleClass('open');
       $('#contacts input[type="text"]').focus();
+      return e.preventDefault();
+    });
+    $('#Call .refresh').click(function(e) {
+      getCaptcha();
+      return e.preventDefault();
+    });
+    $('input[name="phone"]').mask('+7 (000) 000 00 00');
+    $('#Call form').submit(function(e) {
+      var data;
+      data = $(this).serialize();
+      $.post('/include/form.php', data, function(data) {
+        data = $.parseJSON(data);
+        console.log(data);
+        if (data.status === "ok") {
+          $('#Call form').hide();
+          return $('#Call .success').show();
+        } else if (data.status === "error") {
+          $('#Call input[name=captcha_word]').addClass('parsley-error');
+          return getCaptcha();
+        }
+      });
       return e.preventDefault();
     });
     $('.ribbon span').arctext({

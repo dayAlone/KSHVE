@@ -93,6 +93,14 @@ init_popup = ()->
 		deeplinking: false
 		gallery_markup: ""
 
+getCaptcha = ()->
+	$.get '/include/captcha.php', (data)->
+		setCaptcha data
+
+setCaptcha = (code)->
+	$('input[name=captcha_code]').val(code)
+	$('.captcha_img').attr 'src', '/include/captcha.php?captcha_sid='+code
+
 $(document).ready ->
 
 	init_popup()
@@ -156,6 +164,27 @@ $(document).ready ->
 	$('#contacts a.search').click (e)->
 		$('#contacts').toggleClass('open')
 		$('#contacts input[type="text"]').focus()
+		e.preventDefault()
+
+	$('#Call .refresh').click (e)->
+		getCaptcha()
+		e.preventDefault()
+	
+	$('input[name="phone"]').mask('+7 (000) 000 00 00');
+
+	$('#Call form').submit (e)->
+		data = $(this).serialize()
+		$.post '/include/form.php',
+	        data,
+	        (data) -> 
+	        	data = $.parseJSON(data)
+	        	console.log data
+	        	if data.status == "ok"
+	        		$('#Call form').hide()
+	        		$('#Call .success').show()
+	        	else if data.status == "error"
+	        		$('#Call input[name=captcha_word]').addClass('parsley-error')
+	        		getCaptcha()
 		e.preventDefault()
 
 	$('.ribbon span').arctext

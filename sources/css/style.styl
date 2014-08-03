@@ -1253,6 +1253,10 @@ a
 		.here
 			margin-left -20px
 			font-size 16px
+		.captcha_img
+			border 1px solid #ccc
+		.success
+			display none
 		p
 			font-size 16px
 		input[type="submit"]
@@ -1284,6 +1288,8 @@ a
 			box-shadow inset 1px 1px 2px rgba(0,0,0,.2)
 			&:focus
 				outline 0
+			&.parsley-error
+				border 1px solid red
 		textarea
 			height 137px
 #asd_share_buttons
@@ -1299,3 +1305,5 @@ a
 		iframe, div
 			display inline-block
 			vertical-align middle
+.parsley-errors-list 
+	display none
