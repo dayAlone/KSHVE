@@ -12247,10 +12247,10 @@ a:hover {
 }
 @media screen and (max-width: 1164px) {
   .index #contacts {
-    font-size: 12px;
+    font-size: 11px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1124px) {
   .index #contacts {
     font-size: 10px;
   }
@@ -12260,6 +12260,7 @@ a:hover {
   .index #contacts a.call {
     width: 100px;
     margin: 0 10px;
+    margin-top: 4px;
 
     font-size: 10px;
   }
