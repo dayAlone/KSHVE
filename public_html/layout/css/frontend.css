@@ -13003,3 +13003,12 @@ a.blue-button {
   font-weight: bold;
   line-height: 39px;
 }
+.slick-track {
+  min-width: 100%;
+
+  text-align: center;
+}
+.slick-track .slick-slide {
+  display: inline-block;
+  float: none;
+}

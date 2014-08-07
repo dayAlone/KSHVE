@@ -3,7 +3,7 @@ bower_components
 node_modules
 public_html/bitrix/
 bitrix/config.codekit
-
+upload/
 log.txt
 
 *.html
