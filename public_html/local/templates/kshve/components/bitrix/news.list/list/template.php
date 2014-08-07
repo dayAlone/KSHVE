@@ -16,14 +16,12 @@ if(count($arResult['ITEMS'])>0):
             if($i % $col == 0) {
             if ($i != 0) echo "</div>";
             echo "<div class=\"row\">";
-            if($tag=='span')
-              $item['DETAIL_PAGE_URL'] = $item['PREVIEW_PICTURE']['SRC'];
         }
         ?>
             <div class="col-md-<?=12/$col?>">
               <div class="item">
                   <? if(strlen($item['PREVIEW_PICTURE']['SMALL'])>0): ?>
-                    <a href='<?=$item['DETAIL_PAGE_URL']?>' <?=$rel?> style="background-image: url(<?=$item['PREVIEW_PICTURE']['SMALL']?>)" class="image"></a>
+                    <a href='<?=($tag=='span'?$item['PREVIEW_PICTURE']['SRC']:$item['DETAIL_PAGE_URL'])?>' <?=$rel?> style="background-image: url(<?=$item['PREVIEW_PICTURE']['SMALL']?>)" class="image"></a>
                   <? endif;?>
                   <<?=$tag?> <?=($tag=='a'?"href='".$item['DETAIL_PAGE_URL']."'":"")?> class="title"><?=$item['NAME']?></<?=$tag?>>
                   <p><?=$item['PREVIEW_TEXT']?></p>
