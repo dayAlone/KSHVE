@@ -192,6 +192,12 @@ $(document).ready ->
 	        		getCaptcha()
 		e.preventDefault()
 
+	$('#Call').on 'hidden.bs.modal', ()->
+		$('#Call form input[type="email"],#Call form input[type="text"], #Call form textarea').removeClass('parsley-error').removeAttr("value")
+		console.log 12
+		$('#Call form').trigger('reset').show()
+		$('#Call .success').hide()
+
 	$('.ribbon span').arctext
 		radius: 1200
 
