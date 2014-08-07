@@ -8,7 +8,7 @@ if(count($arResult['ITEMS'])>0):
     if($arParams['DETAIL_URL']=='#')
     {
       $tag = 'span';
-      $rel = "rel='prettyPhoto[]'";
+      $rel = "rel='prettyPhoto'";
     }
     else
       $tag = 'a';
