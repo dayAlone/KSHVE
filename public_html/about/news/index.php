@@ -60,6 +60,8 @@ $APPLICATION->SetPageProperty('line', "false");
 	$news_filter = array(
 	"<=PROPERTY_DATE" => $date
 	);
+	if($APPLICATION->GetPageProperty('news_id'))
+		$news_filter["!ID"] = $APPLICATION->GetPageProperty('news_id');
 	$APPLICATION->IncludeComponent("bitrix:news.list", "news_list", 
 		array(
 			"IBLOCK_ID"            => 1,
