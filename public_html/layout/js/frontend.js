@@ -16950,6 +16950,9 @@ if ('undefined' !== typeof window.ParsleyValidator)
       count = item.length;
       loops = Math.ceil(count / step);
       i = 0;
+      if (step > 5) {
+        step = 5;
+      }
       el.find('.item').removeAttr('style');
       while (i < count) {
         items = {};
