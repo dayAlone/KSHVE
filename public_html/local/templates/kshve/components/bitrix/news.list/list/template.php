@@ -6,19 +6,24 @@ if(count($arResult['ITEMS'])>0):
   <?php
     $col = 2;
     if($arParams['DETAIL_URL']=='#')
+    {
       $tag = 'span';
+      $rel = "rel='prettyPhoto[]'";
+    }
     else
       $tag = 'a';
     foreach ($arResult['ITEMS'] as $i=>$item) {
             if($i % $col == 0) {
             if ($i != 0) echo "</div>";
             echo "<div class=\"row\">";
+            if($tag=='span')
+              $item['DETAIL_PAGE_URL'] = $item['PREVIEW_PICTURE']['SRC'];
         }
         ?>
             <div class="col-md-<?=12/$col?>">
               <div class="item">
-                  <? if(strlen($item['PREVIEW_PICTURE']['SRC'])>0): ?>
-                    <<?=$tag?> <?=($tag=='a'?"href='".$item['DETAIL_PAGE_URL']."'":"")?> style="background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)" class="image"></<?=$tag?>>
+                  <? if(strlen($item['PREVIEW_PICTURE']['SMALL'])>0): ?>
+                    <a href='<?=$item['DETAIL_PAGE_URL']?>' <?=$rel?> style="background-image: url(<?=$item['PREVIEW_PICTURE']['SMALL']?>)" class="image"></a>
                   <? endif;?>
                   <<?=$tag?> <?=($tag=='a'?"href='".$item['DETAIL_PAGE_URL']."'":"")?> class="title"><?=$item['NAME']?></<?=$tag?>>
                   <p><?=$item['PREVIEW_TEXT']?></p>
