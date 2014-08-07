@@ -11522,6 +11522,21 @@ a:hover {
     width: 20%;
   }
 }
+.detail #content .news .item.i-4 {
+  display: none;
+}
+@media screen and (max-width: 1152px) {
+  .detail #content .news .item.i-4,
+  .detail #content .news .item.i-3,
+  .detail #content .news .item.i-2 {
+    display: none;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .detail #content .news .item.i-4 {
+    display: block;
+  }
+}
 #content .news .item:hover .frame {
   border-color: #2e5fa7;
 }

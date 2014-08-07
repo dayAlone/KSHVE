@@ -618,6 +618,15 @@ a
 				width 50%
 			@media screen and (min-width: 1600px)
 				width 20%
+			.detail &
+				&.i-4
+					display none
+				@media screen and (max-width: 1152px)
+					&.i-4, &.i-3, &.i-2
+						display none
+				@media screen and (min-width: 1600px)
+					&.i-4
+						display block
 			&:hover
 				.frame
 					border-color blue

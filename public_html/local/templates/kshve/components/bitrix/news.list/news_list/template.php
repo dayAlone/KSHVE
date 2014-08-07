@@ -3,7 +3,7 @@ $this->setFrameMode(true);
 ?>
 <div class="news">
 <?foreach ($arResult['ITEMS'] as $key => &$item):?>
-	  <div class="item">
+	  <div class="item i-<?=$key?>">
         <div class="frame">
         <? if(strlen($item['PREVIEW_PICTURE']['SRC'])>0):?>
           <a style="background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)" class="image" href="<?=$item['DETAIL_PAGE_URL']?>"></a>
