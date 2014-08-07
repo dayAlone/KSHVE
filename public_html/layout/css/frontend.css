@@ -11250,6 +11250,7 @@ a:hover {
 }
 #content > .text .list .item {
   float: left;
+  overflow: hidden;
 
   width: 100%;
   min-height: 170px;
