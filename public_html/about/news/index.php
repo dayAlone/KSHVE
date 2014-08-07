@@ -7,7 +7,7 @@ $APPLICATION->SetPageProperty('line', "false");
 <?
 	CModule::IncludeModule("iblock");
 	$display_pages = "Y";
-	$news_count    = 8;
+	$news_count    = 20;
 	$section       = false;
 	$detail        = true;
 	$arSort = array("SORT" => "ASC");

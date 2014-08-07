@@ -966,7 +966,7 @@ a:hover {
 }
 @media screen and (max-width: 1152px) {
   #content .news .item {
-    width: 33.333333333%;
+    width: 50%;
   }
 }
 @media screen and (min-width: 1600px) {
