@@ -30,7 +30,7 @@ if(count($arResult['ITEMS'])>0):
                   <<?=$tag?> <?=($tag=='a'?"href='".$item['DETAIL_PAGE_URL']."'":"")?> class="title"><?=$item['NAME']?></<?=$tag?>>
                   <p><?=$item['PREVIEW_TEXT']?></p>
                   <? if(srtlen($item['VIDEO'])>0):?>
-                    <a href="<?=$item['VIDEO']?>" class="blue-button small">Видео</a>
+                    <a href="<?=$item['VIDEO']?>" rel="prettyPhoto" class="blue-button small">Видео</a>
                   <? endif;?>
               </div>
             </div>
