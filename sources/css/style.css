@@ -2302,3 +2302,6 @@ a.blue-button.small {
   display: inline-block;
   float: none;
 }
+.resp_slider h1 {
+  font-family: 'Oranienbaum';
+}
