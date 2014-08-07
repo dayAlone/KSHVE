@@ -172,7 +172,7 @@ a:hover {
   }
 }
 #nav ul a.active {
-  font-weight: bold;
+  color: #253665;
 }
 #nav ul a:hover {
   color: #3662a5;
