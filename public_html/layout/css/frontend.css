@@ -11252,6 +11252,7 @@ a:hover {
   float: left;
 
   width: 100%;
+  min-height: 170px;
   margin-bottom: 20px;
   padding: 10px;
 

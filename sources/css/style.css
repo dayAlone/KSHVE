@@ -748,6 +748,7 @@ a:hover {
   background: #fff;
   border: 1px solid #e5e8e8;
   padding: 10px;
+  min-height: 170px;
   margin-bottom: 20px;
   -webkit-transition-property: all;
   -moz-transition-property: all;
