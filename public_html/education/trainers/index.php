@@ -18,7 +18,8 @@ $APPLICATION->IncludeComponent("bitrix:news.list", "list",
 		"DISPLAY_PANEL"        => "N",
 		"DISPLAY_TOP_PAGER"    => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
-		"SET_TITLE"            => "N"
+		"SET_TITLE"            => "N",
+		"DISPLAY_POPUP"        => "Y"
 	),
 	false
 );

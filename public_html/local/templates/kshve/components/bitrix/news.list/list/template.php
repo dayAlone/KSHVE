@@ -21,7 +21,11 @@ if(count($arResult['ITEMS'])>0):
             <div class="col-md-<?=12/$col?>">
               <div class="item">
                   <? if(strlen($item['PREVIEW_PICTURE']['SMALL'])>0): ?>
-                    <a href='<?=($tag=='span'?$item['PREVIEW_PICTURE']['SRC']:$item['DETAIL_PAGE_URL'])?>' <?=$rel?> style="background-image: url(<?=$item['PREVIEW_PICTURE']['SMALL']?>)" class="image"></a>
+                    <? if($arParams['DISPLAY_POPUP']=='Y'):?>
+                      <a href='<?=($tag=='span'?$item['PREVIEW_PICTURE']['SRC']:$item['DETAIL_PAGE_URL'])?>' <?=$rel?> style="background-image: url(<?=$item['PREVIEW_PICTURE']['SMALL']?>)" class="image"></a>
+                    <? else: ?>
+                      <<?=$tag?> <?=($tag=='a'?"href='".$item['DETAIL_PAGE_URL']."'":"")?> style="background-image: url(<?=$item['PREVIEW_PICTURE']['SRC']?>)" class="image"></<?=$tag?>>
+                    <? endif;?>
                   <? endif;?>
                   <<?=$tag?> <?=($tag=='a'?"href='".$item['DETAIL_PAGE_URL']."'":"")?> class="title"><?=$item['NAME']?></<?=$tag?>>
                   <p><?=$item['PREVIEW_TEXT']?></p>
