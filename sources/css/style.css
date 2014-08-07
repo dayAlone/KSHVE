@@ -2287,6 +2287,12 @@ a.blue-button {
   font-size: 16px;
   font-weight: bold;
 }
+a.blue-button:small {
+  font-size: 14px;
+  padding: 0 10px;
+  line-height: 31px;
+  height: 30px;
+}
 .slick-track {
   min-width: 100%;
   text-align: center;

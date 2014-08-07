@@ -13020,6 +13020,13 @@ a.blue-button {
   font-weight: bold;
   line-height: 41px;
 }
+a.blue-button:small {
+  height: 30px;
+  padding: 0 10px;
+
+  font-size: 14px;
+  line-height: 31px;
+}
 .slick-track {
   min-width: 100%;
 
