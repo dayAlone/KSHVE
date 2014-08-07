@@ -13020,7 +13020,8 @@ a.blue-button {
   font-weight: bold;
   line-height: 41px;
 }
-a.blue-button:small {
+a.blue-button.small {
+  min-width: 100px;
   height: 30px;
   padding: 0 10px;
 
