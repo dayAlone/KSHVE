@@ -41,7 +41,7 @@ $APPLICATION->SetPageProperty('line', "false");
 			"CACHE_TIME"    => "3600",
 		));
 		$display_pages = "N";
-		$news_count    = 4;
+		$news_count    = 5;
 	else:
 		$APPLICATION->IncludeComponent("bitrix:catalog.section.list","years",
 		Array(
@@ -53,8 +53,11 @@ $APPLICATION->SetPageProperty('line', "false");
 		);
 	endif;
 	global $news_filter;
+	$date = date('Y-m-d')." 23:59:59";
+	if($APPLICATION->GetPageProperty('date'))
+		$date = date('Y-m-d', strtotime($APPLICATION->GetPageProperty('date')))." 23:59:59";
 	$news_filter = array(
-	"<=PROPERTY_DATE" => date('Y-m-d')." 23:59:59"
+	"<=PROPERTY_DATE" => $date
 	);
 	$APPLICATION->IncludeComponent("bitrix:news.list", "news_list", 
 		array(
