@@ -12405,6 +12405,8 @@ a:hover {
 }
 #banner .partners a {
   margin: 0 27px;
+
+  cursor: default;
 }
 #banner .partners a:first-child {
   margin-left: 0;
