@@ -3,11 +3,14 @@ delay = (ms, func) -> setTimeout func, ms
 autoHeight = (el) ->
 	if el.length > 0
 		item    = el.find('.item')
+		item_padding = item.css('padding-left').split('px')[0]*2
 		padding = el.css('padding-left').split('px')[0]*2
-		step    = Math.ceil((el.width()-padding*2)/item.width())
+		step    = Math.ceil((el.width()-padding*2)/(item.width()+padding))
 		count   = item.length
 		loops   = Math.ceil(count/step)
 		i       = 0
+
+		console.log step, padding, el.width(), item.width()
 
 		el.find('.item').removeAttr 'style'
 
@@ -19,8 +22,6 @@ autoHeight = (el) ->
 			heights = []
 			$.each items, ()->
 				heights.push($(this).height())
-
-			console.log step, heights
 			
 			$.each items, ()->
 				$(this).height Math.max.apply(Math,heights)
