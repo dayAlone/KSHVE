@@ -16947,7 +16947,7 @@ if ('undefined' !== typeof window.ParsleyValidator)
       item = el.find('.item');
       item_padding = item.css('padding-left').split('px')[0] * 2;
       padding = el.css('padding-left').split('px')[0] * 2;
-      step = Math.ceil((el.width() - padding * 2) / (item.width() + padding));
+      step = Math.ceil((el.width() - padding * 2) / item.width());
       count = item.length;
       loops = Math.ceil(count / step);
       i = 0;
