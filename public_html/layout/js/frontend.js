@@ -16944,14 +16944,17 @@ if ('undefined' !== typeof window.ParsleyValidator)
   autoHeight = function(el) {
     var count, heights, i, item, item_padding, items, loops, padding, step, x, _i, _ref;
     if (el.length > 0) {
-      item = el.find('.item');
+      item = el.find('.item:first');
+      console.log(item.width());
       item_padding = item.css('padding-left').split('px')[0] * 2;
       padding = el.css('padding-left').split('px')[0] * 2;
       step = Math.ceil((el.width() - padding * 2) / item.width());
       count = item.length;
       loops = Math.ceil(count / step);
       i = 0;
-      console.log(step, padding, el.width(), item.width());
+      if (el.hasClass('.news') && step > 5) {
+        step = 5;
+      }
       el.find('.item').removeAttr('style');
       while (i < count) {
         items = {};
@@ -17032,11 +17035,11 @@ if ('undefined' !== typeof window.ParsleyValidator)
       }
     });
     $('#content > .text').css('min-height', $(window).height() - 60);
-    autoHeight($('.text .news, .text .reviews, .text .list'));
     vignettes();
     $('.text .news .item:last, .text .reviews .item:last, .vignettes *').one('transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', function() {
       return vignettes();
     });
+    autoHeight($('.text .news, .text .reviews, .text .list'));
     return true;
   };
 
