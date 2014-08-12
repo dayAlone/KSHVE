@@ -11,7 +11,7 @@ autoHeight = (el) ->
 		loops   = Math.ceil(count/step)
 		i       = 0
 
-		if(el.hasClass('.news') && step>5)
+		if(el.hasClass('news') && step>5)
 			step = 5
 
 		el.find('.item').removeAttr 'style'
