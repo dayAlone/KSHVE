@@ -22,7 +22,9 @@ autoHeight = (el) ->
 			items = {}
 			for x in [0..step-1]
 				items[x] = item[i+x] if item[i+x]
-				
+			
+			console.log items
+
 			heights = []
 			$.each items, ()->
 				heights.push($(this).height())

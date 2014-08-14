@@ -28,6 +28,7 @@
             items[x] = item[i + x];
           }
         }
+        console.log(items);
         heights = [];
         $.each(items, function() {
           return heights.push($(this).height());
