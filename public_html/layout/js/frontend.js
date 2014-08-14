@@ -17079,7 +17079,7 @@ if ('undefined' !== typeof window.ParsleyValidator)
   autoHeight = function(el) {
     var count, heights, i, item, item_padding, items, loops, padding, step, x, _i, _ref;
     if (el.length > 0) {
-      item = el.find('.item:first');
+      item = el.find('.item');
       console.log(item.width());
       item_padding = item.css('padding-left').split('px')[0] * 2;
       padding = el.css('padding-left').split('px')[0] * 2;

@@ -2,7 +2,7 @@ delay = (ms, func) -> setTimeout func, ms
 
 autoHeight = (el) ->
 	if el.length > 0
-		item    = el.find('.item:first')
+		item    = el.find('.item')
 		console.log item.width()
 		item_padding = item.css('padding-left').split('px')[0]*2
 		padding = el.css('padding-left').split('px')[0]*2
