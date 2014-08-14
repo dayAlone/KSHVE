@@ -16955,6 +16955,7 @@ if ('undefined' !== typeof window.ParsleyValidator)
       if (el.hasClass('news') && step > 5) {
         step = 5;
       }
+      console.log(step);
       el.find('.item').removeAttr('style');
       while (i < count) {
         items = {};
