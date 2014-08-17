@@ -11046,6 +11046,27 @@ a:hover {
   color: #000;
   background: transparent;
 }
+#content .third-nav.back,
+#content .pages.back {
+  margin-bottom: 30px;
+}
+#content .third-nav .date a,
+#content .pages .date a {
+  padding: 0 10px;
+
+  text-transform: uppercase;
+
+  color: #2d6594;
+
+  font-family: 'Open Sans Condensed';
+  font-size: 13px;
+  font-weight: bold;
+}
+#content .third-nav .date a:hover,
+#content .pages .date a:hover {
+  color: #1379d8;
+  background: transparent;
+}
 #content > .text {
   position: relative;
   position: relative;

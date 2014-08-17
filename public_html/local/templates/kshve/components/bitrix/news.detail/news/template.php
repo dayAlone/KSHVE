@@ -25,5 +25,8 @@ $item = &$arResult;
 	<?
 		endif;
 	?>
+	<div class="third-nav back">
+		<?=svg('vensel-6')?><span class="date"><a href="/about/news/">Назад к новостям</a></span><?=svg('vensel-7')?>
+	</div>
 	<h1 class="center">Предыдущие новости</h1>
 </div>

@@ -561,6 +561,24 @@ a:hover {
   background: transparent;
   color: #000;
 }
+#content .third-nav.back,
+#content .pages.back {
+  margin-bottom: 30px;
+}
+#content .third-nav .date a,
+#content .pages .date a {
+  font-size: 13px;
+  padding: 0 10px;
+  font-weight: bold;
+  font-family: 'Open Sans Condensed';
+  text-transform: uppercase;
+  color: #2d6594;
+}
+#content .third-nav .date a:hover,
+#content .pages .date a:hover {
+  color: #1379d8;
+  background: transparent;
+}
 #content > .text {
   float: left;
   width: 100%;
