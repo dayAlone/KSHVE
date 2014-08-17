@@ -63,7 +63,7 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4"><small>Поля, отмеченные * <br>- обязательны<br> для заполнения.</small></div>
+          <div class="col-md-4"><small class="info">Поля, отмеченные * <br>- обязательны для заполнения.</small></div>
           <div class="col-md-8">
             <p>Введите код с картинки</p>
             <div class="row">

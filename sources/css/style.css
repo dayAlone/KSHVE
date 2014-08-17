@@ -2115,6 +2115,10 @@ a:hover {
   margin-left: -23px;
   line-height: 35px;
 }
+.modal-dialog .modal-content small.info {
+  float: left;
+  margin-top: 40px;
+}
 .modal-dialog .modal-content .here {
   margin-left: -20px;
   font-size: 16px;
