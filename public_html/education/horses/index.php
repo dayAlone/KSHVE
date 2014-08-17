@@ -13,6 +13,7 @@ $APPLICATION->SetPageProperty('line', "false");
 		"SORT_ORDER1"          => "ASC",
 		"DETAIL_URL"           => "#",
 		"CACHE_TYPE"           => "A",
+		"FIELD_CODE"           => Array('DETAIL_PICTURE'),
 		"PROPERTY_CODE"        => Array("VIDEO"),
 		"DISPLAY_PANEL"        => "N",
 		"DISPLAY_TOP_PAGER"    => "N",
