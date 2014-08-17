@@ -2111,6 +2111,10 @@ a:hover {
 .modal-dialog .modal-content .here {
   line-height: 37px;
 }
+.modal-dialog .modal-content a.refresh {
+  margin-left: -23px;
+  line-height: 35px;
+}
 .modal-dialog .modal-content .here {
   margin-left: -20px;
   font-size: 16px;
