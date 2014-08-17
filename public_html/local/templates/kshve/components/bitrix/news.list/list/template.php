@@ -29,6 +29,9 @@ if(count($arResult['ITEMS'])>0):
                   <? endif;?>
                   <<?=$tag?> <?=($tag=='a'?"href='".$item['DETAIL_PAGE_URL']."'":"")?> class="title"><?=$item['NAME']?></<?=$tag?>>
                   <p><?=$item['PREVIEW_TEXT']?></p>
+                  <?if($arParams['SHOW_MORE']):?>
+                    <a href="<?=$item['DETAIL_PAGE_URL']?>">Больше информации</a>
+                  <?endif;?>
                   <? if(strlen($item['VIDEO'])>0):?>
                     <a href="<?=$item['VIDEO']?>" rel="prettyPhoto" class="blue-button small">Видео</a>
                   <? endif;?>
