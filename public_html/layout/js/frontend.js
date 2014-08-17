@@ -17202,6 +17202,10 @@ if ('undefined' !== typeof window.ParsleyValidator)
   $(document).ready(function() {
     var x;
     init_popup();
+    $('a.show-form').click(function(e) {
+      $(this).parents('.content').find('form:hidden').slideDown();
+      return e.preventDefault();
+    });
     $('.gallery .slider').slick({
       onInit: function() {
         return init_popup();

@@ -7,7 +7,13 @@ $APPLICATION->SetTitle("Как помочь Школе");
 	верховой езды – на благо людям.</p>
 <p>Пожалуйста, рассмотрите возможность сделать Ваш вклад уже сегодня.</p>
 <p>Ваше пожертвование станет важным ресурсом для возрождения национальных традиций верховой езды.</p>
-<p><a href="/payment/" class="blue-button" target="_blank">Сделать пожертвование</a></p>
+<p><a href="" class="blue-button show-form" target="_blank">Сделать пожертвование</a></p>
+
+
+<form class="oplata_uslug" style="display:none" action="https://payments.paysecure.ru/pay/order.cfm" method="post" target="_parent">
+<p>Поля, отмеченные знаком " <strong>*</strong> ", <strong>обязательны для заполнения</strong>.</p>
+<label><input type="text" name="OrderNumber" value="">* Номер заказа</label> <label><input type="text" name="OrderAmount" value="">* Сумма платежа в рублях</label><label><input type="text" name="OrderReserve" value="">* Получатель услуг</label> <label><input type="text" name="Comment" value="">Комментарий к платежу</label> <label><input type="text" name="FirstName" value="">Имя</label> <label><input type="text" name="MiddleName" value="">Отчество</label> <label><input type="text" name="LastName" value="">Фамилия</label> <label><input type="text" name="Email" value="">Адрес электронной почты</label> <input type="hidden" name="Merchant_ID" value="732896"> <input type="hidden" name="OrderCurrency" value="RUB"> <input type="hidden" name="Country" value="RUS"> <input type="hidden" name="State" value="77"> <input type="hidden" name="TestMode" value="0"> <label><input class="oplata_uslug_button" type="Submit" name="Submit" value="Оплатить"></label></form>
+
 <p>Наберите цифру 1 в поле &laquo;Номер заказа&raquo; для благотворительного пожертвования на уставные цели организации 
 для поддержки социальных программ и цифру 2 для поддержки конного состава.</p>
 <p><strong>Поддержка социальных программ</strong><br/>

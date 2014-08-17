@@ -113,6 +113,10 @@ $(document).ready ->
 
 	init_popup()
 
+	$('a.show-form').click (e)->
+		$(this).parents('.content').find('form:hidden').slideDown()
+		e.preventDefault()
+
 	$('.gallery .slider').slick
 		onInit: ()->
 			init_popup()
