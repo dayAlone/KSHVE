@@ -1,7 +1,7 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Как помочь Школе");
-?>
+?><style> .title-image {margin-top:-30px; margin-bottom:-25px;} </style>{IMAGE:487}
 <p>Благотворительные пожертвования крайне важны для поддержки социальных программ Кремлевской школы 
 	верховой езды. Ваше пожертвование будет способствовать реализации нашей Миссии:<br/> Культура и традиции 
 	верховой езды – на благо людям.</p>
@@ -11,8 +11,24 @@ $APPLICATION->SetTitle("Как помочь Школе");
 
 
 <form class="oplata_uslug" style="display:none" action="https://payments.paysecure.ru/pay/order.cfm" method="post" target="_parent">
+<p>В предложенной таблице заполните необходимые поля. Внимательно проверьте введенные данные и нажмите кнопку «Оплатить». Далее выберите способ оплаты и следуйте указаниям системы. В случае успешного выполнения действий по оплате услуг Вы получите уведомление по электронной почте. Для предотвращения спорных вопросов по оплате сохраняйте данное письмо до получения услуги.</p>
+<p><b>Обращаем Ваше внимание, что разовые посещения необходимо оплатить не позднее, чем за три рабочих дня до даты занятия.</b></p>
+<h4>Здесь Вы можете оплатить услуги Кремлевской школы верховой езды посредством следующих платежных систем:</h4>
+<ol>
+<li>Кредитная карта</li>
+<li>WebMoney</li>
+<li>Яндекс.Деньги</li>
+<li>QIWI</li>
+<li>Assist®ID <img src="http://assist.ru/images/assist_logo.gif" width="100" border="0" alt="Система электронных платежей"></li>
+</ol>
 <p>Поля, отмеченные знаком " <strong>*</strong> ", <strong>обязательны для заполнения</strong>.</p>
-<label><input type="text" name="OrderNumber" value="">* Номер заказа</label> <label><input type="text" name="OrderAmount" value="">* Сумма платежа в рублях</label><label><input type="text" name="OrderReserve" value="">* Получатель услуг</label> <label><input type="text" name="Comment" value="">Комментарий к платежу</label> <label><input type="text" name="FirstName" value="">Имя</label> <label><input type="text" name="MiddleName" value="">Отчество</label> <label><input type="text" name="LastName" value="">Фамилия</label> <label><input type="text" name="Email" value="">Адрес электронной почты</label> <input type="hidden" name="Merchant_ID" value="732896"> <input type="hidden" name="OrderCurrency" value="RUB"> <input type="hidden" name="Country" value="RUS"> <input type="hidden" name="State" value="77"> <input type="hidden" name="TestMode" value="0"> <label><input class="oplata_uslug_button" type="Submit" name="Submit" value="Оплатить"></label></form>
+<label><input type="text" name="OrderNumber" value="">* Номер заказа</label> <label><input type="text" name="OrderAmount" value="">* Сумма платежа в рублях</label><label><input type="text" name="OrderReserve" value="">* Получатель услуг</label> <label><input type="text" name="Comment" value="">Комментарий к платежу</label> <label><input type="text" name="FirstName" value="">Имя</label> <label><input type="text" name="MiddleName" value="">Отчество</label> <label><input type="text" name="LastName" value="">Фамилия</label> <label><input type="text" name="Email" value="">Адрес электронной почты</label> <input type="hidden" name="Merchant_ID" value="732896"> <input type="hidden" name="OrderCurrency" value="RUB"> <input type="hidden" name="Country" value="RUS"> <input type="hidden" name="State" value="77"> <input type="hidden" name="TestMode" value="0"> <label><input class="oplata_uslug_button" type="Submit" name="Submit" value="Оплатить"></label>
+<div style="clear: both;">&nbsp;</div>
+<h3>Безопасность онлайновых платежей</h3>
+<p><img src="http://assist.ru/images/assist_logo.gif" width="180" border="0" alt="Система электронных платежей"><br>В системе ASSIST безопасность платежей обеспечивается использованием защищенного протокола SSL 3.0 для передачи конфиденциальной информации от клиента на сервер системы ASSIST и дальнейшей обработки в процессинговом центре. Это значит, что Ваши конфиденциальные данные (реквизиты карты, регистрационные данные и др.) никто, даже КШВЕ, не может получить, их обработка в процессинговом центре полностью защищена.</p>
+<p>Кроме того, при обработке платежей по банковским картам, используется безопасная технология 3D-Secure, которую в обязательном порядке требует международная платежная система <a href="http://www.visa.com.ru/?country=ru&amp;ep=v_gg_new">VISA</a>.</p>
+
+</form>
 
 <p>Наберите цифру 1 в поле &laquo;Номер заказа&raquo; для благотворительного пожертвования на уставные цели организации 
 для поддержки социальных программ и цифру 2 для поддержки конного состава.</p>

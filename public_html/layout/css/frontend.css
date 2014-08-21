@@ -11156,6 +11156,9 @@ a:hover {
 #content > .text img {
   max-width: 100%;
 }
+#content > .text ul li {
+  font-size: 15px;
+}
 #content > .text .divider + .gallery {
   margin-top: 10px;
 }
