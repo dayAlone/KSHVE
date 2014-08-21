@@ -7,6 +7,12 @@ $arUrlRewrite = array(
 		"PATH" => "/education/directions/index.php",
 	),
 	array(
+		"CONDITION" => "#^/faq/(.*)/(.*)#",
+		"RULE" => "ELEMENT_CODE=\$1&\$2",
+		"ID" => "",
+		"PATH" => "/faq/index.php",
+	),
+	array(
 		"CONDITION" => "#^/about/news/(.*)/(.*)#",
 		"RULE" => "ELEMENT_CODE=\$1&\$2",
 		"ID" => "",
