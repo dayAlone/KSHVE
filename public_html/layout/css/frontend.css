@@ -10592,7 +10592,7 @@ a:hover {
   float: left;
 
   width: 100%;
-  width: 235px;
+  width: 230px;
   margin-bottom: 9px;
 }
 #nav ul a {
@@ -10905,6 +10905,11 @@ a:hover {
 @media screen and (max-width: 1024px) {
   #nav {
     width: 200px;
+  }
+}
+@media screen and (max-height: 700px) {
+  #nav ul li {
+    margin-bottom: 4px;
   }
 }
 #content {
