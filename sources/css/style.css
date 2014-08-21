@@ -444,9 +444,9 @@ a:hover {
     width: 200px;
   }
 }
-@media screen and (max-height: 700px) {
+@media screen and (max-height: 750px) {
   #nav ul li {
-    margin-bottom: 4px;
+    margin-bottom: 3px;
   }
 }
 #content {
