@@ -10593,7 +10593,7 @@ a:hover {
 
   width: 100%;
   width: 235px;
-  margin-bottom: 14px;
+  margin-bottom: 9px;
 }
 #nav ul a {
   color: #fff;
@@ -10793,7 +10793,7 @@ a:hover {
   }
 }
 #nav ul li {
-  margin-bottom: 9px;
+  margin-bottom: 7px;
 }
 #nav ul li:last-child {
   margin-bottom: 0;
@@ -13089,4 +13089,7 @@ a.blue-button.small {
 }
 .resp_slider h1 {
   font-family: 'Oranienbaum';
+}
+font.tablebodytext {
+  display: none;
 }

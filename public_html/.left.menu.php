@@ -50,6 +50,13 @@ $aMenuLinks = Array(
 			"" 
 		),
 	Array(
+			"Советы всадникам",
+			"/faq/", 
+			Array(), 
+			Array(), 
+			"" 
+		),
+	Array(
 			"Контакты", 
 			"/contacts/", 
 			Array(), 

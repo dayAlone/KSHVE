@@ -17203,7 +17203,9 @@ if ('undefined' !== typeof window.ParsleyValidator)
     var x;
     init_popup();
     $('a.show-form').click(function(e) {
-      $(this).parents('.content').find('form:hidden').slideDown();
+      $(this).parents('.content').find('form:hidden').slideDown(function() {
+        return vignettes();
+      });
       return e.preventDefault();
     });
     $('.gallery .slider').slick({

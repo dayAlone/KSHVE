@@ -114,7 +114,8 @@ $(document).ready ->
 	init_popup()
 
 	$('a.show-form').click (e)->
-		$(this).parents('.content').find('form:hidden').slideDown()
+		$(this).parents('.content').find('form:hidden').slideDown ()->
+			vignettes()
 		e.preventDefault()
 
 	$('.gallery .slider').slick
