@@ -12465,6 +12465,9 @@ a:hover {
   font-weight: 700;
   line-height: 18px;
 }
+#banner .partners img {
+  max-height: 44px;
+}
 @media screen and (max-width: 1152px) {
   #banner .partners .title {
     margin-left: 15px;

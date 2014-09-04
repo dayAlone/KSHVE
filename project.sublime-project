@@ -3,14 +3,6 @@
 	[
 		{
 			"follow_symlinks": true,
-			"path": "/Users/slider/Downloads/itrack.webmessenger"
-		},
-		{
-			"follow_symlinks": true,
-			"path": "public_html/bitrix/modules/bitrixacademy.mymodule"
-		},
-		{
-			"follow_symlinks": true,
 			"path": "public_html/local/templates/kshve"
 		},
 		{
