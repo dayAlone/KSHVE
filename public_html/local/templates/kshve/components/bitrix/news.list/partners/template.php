@@ -2,7 +2,7 @@
 $this->setFrameMode(true);
 ?>
 <?foreach ($arResult['ITEMS'] as $key => &$item):?>
-	<a href="<?=$item['LINK']?>">
+	<a href="<?=$item['LINK']?>" target="_blank">
 		<img src="<?=$item['LOGO']?>" alt="">
 	</a>	
 <?endforeach;?>
