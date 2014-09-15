@@ -29,7 +29,7 @@ $item = &$arResult;
 			$rsPath = GetIBlockSectionPath($item['IBLOCK_ID'], $item['IBLOCK_SECTION_ID']);
 			$arPath = $rsPath->GetNext();
 		?>
-		<?=svg('vensel-6')?><span class="date"><a href="/about/news/<?=$arPath['NAME']?>/">Назад к новостям</a></span><?=svg('vensel-7')?>
+		<?=svg('vensel-6')?><span class="date"><a href="/about/news/<?=$arPath['NAME']?>/">Ко всем новостям</a></span><?=svg('vensel-7')?>
 	</div>
 	<h1 class="center">Предыдущие новости</h1>
 </div>
