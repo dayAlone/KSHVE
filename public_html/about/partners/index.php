@@ -14,7 +14,7 @@ $APPLICATION->SetPageProperty('body_class', "logos");
 					"NEWS_COUNT"           => 0,
 					"SORT_BY1"             => "SORT",
 					"SORT_ORDER1"          => "ASC",
-					"FILTER_NAME"          => "partners",
+					"FILTER_NAME"          => "partners_filter",
 					"DETAIL_URL"           => "#",
 					"CACHE_TYPE"           => "A",
 					"PROPERTY_CODE"        => Array("FILE", "LIST"),
