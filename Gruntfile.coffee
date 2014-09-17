@@ -178,27 +178,27 @@ module.exports = (grunt)->
 				files   : ['<%= files.js.sources %>', '<%= files.js.develop %>']
 				tasks   : ['coffee', 'concat:js_frontend', 'notify:js' ]
 				options :
-						livereload: true
+						livereload: 11111111
 			css_frontend:
 				files   : ['<%= files.css.sources %>', '<%= files.css.develop %>']
 				tasks   : ['stylus', 'concat:css_frontend', 'csscomb', 'notify:css' ]
 				options :
-						livereload: true
+						livereload: 11111111
 			images:
 				files: ['<%= path.sources %>/images/**/*.jpg', '<%= path.sources %>/images/**/*.png']
 				tasks   : ['copy', 'imagemin', 'notify:image' ]
 				options :
-						livereload: true
+						livereload: 11111111
 			svg:
 				files   : ['<%= path.sources %>/images/svg/*.svg']
 				tasks   : ['svgmin', 'jade', 'notify:svg' ]
 				options :
-						livereload: true
+						livereload: 11111111
 			html:
 				files   : ['<%= path.sources %>/html/*.jade', '<%= path.sources %>/html/**/*.jade']
 				tasks   : ['jade', 'notify:html']
 				options :
-						livereload: true
+						livereload: 11111111
 
 	
 	
