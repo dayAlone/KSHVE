@@ -7,7 +7,8 @@ $this->setFrameMode(true);?>
         <div class="shadow-bottom"></div>
 		<?
 		foreach($arResult as $arItem):
-			?><a href="<?=$arItem['LINK']?>" class="<?=($arItem['SELECTED']?'active':'')?>"><?=$arItem['TEXT']?></a><?
+
+			?><a href="<?=$arItem['LINK']?>" class="<?=($arItem['SELECTED']?'active':'')?>"><?=(isset($arItem['PARAMS']['STRONG'])?'<strong>':'')?><?=$arItem['TEXT']?><?=(isset($arItem['PARAMS']['STRONG'])?'</strong>':'')?></a><?
 		endforeach;?>
 	</div>
 </div>

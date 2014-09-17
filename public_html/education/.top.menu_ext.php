@@ -4,7 +4,7 @@ $aMenuLinks = Array(
 			"Направления обучения", 
 			"/education/directions/",
 			Array(), 
-			Array(), 
+			Array("STRONG"=>"Y"), 
 			"" 
 		),
 	Array(
