@@ -12441,8 +12441,11 @@ a:hover {
   font-family: 'Open Sans Condensed';
   line-height: 68px;
 }
+#banner .partners > .row > div {
+  padding: 0;
+}
 #banner .partners a {
-  margin: 0 13px;
+  margin: 0 10px;
 }
 #banner .partners a:first-child {
   margin-left: 0;

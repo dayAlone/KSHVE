@@ -1765,8 +1765,11 @@ a:hover {
   height: 70px;
   background: #52a2e6;
 }
+#banner .partners > .row > div {
+  padding: 0;
+}
 #banner .partners a {
-  margin: 0 13px;
+  margin: 0 10px;
 }
 #banner .partners a:first-child {
   margin-left: 0;
