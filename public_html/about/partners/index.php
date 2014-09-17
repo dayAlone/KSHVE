@@ -17,7 +17,7 @@ $APPLICATION->SetPageProperty('body_class', "logos");
 					"FILTER_NAME"          => "partners",
 					"DETAIL_URL"           => "#",
 					"CACHE_TYPE"           => "A",
-					"PROPERTY_CODE"        => Array("FILE"),
+					"PROPERTY_CODE"        => Array("FILE", "LIST"),
 					"DISPLAY_PANEL"        => "N",
 					"DISPLAY_TOP_PAGER"    => "N",
 					"DISPLAY_BOTTOM_PAGER" => "N",
