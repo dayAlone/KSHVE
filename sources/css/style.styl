@@ -92,8 +92,6 @@ a
 	top 0
 	left 0
 	position fixed
-	.mobile &
-		position absolute
 	color white
 	min-height 670px
 	p.center
@@ -229,6 +227,8 @@ a
 		full-width()
 		svg
 			max-height 80px
+			@media screen and (min-width: 1280px)
+				max-width 100px
 	.vensel
 		margin 10px 0 0
 	.copyright

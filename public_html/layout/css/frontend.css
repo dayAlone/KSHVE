@@ -10548,9 +10548,6 @@ a:hover {
   border-bottom: 0;
   border-left: 1px solid #fff;
 }
-.mobile #nav {
-  position: absolute;
-}
 #nav p.center {
   margin-bottom: 0;
 }
@@ -10786,6 +10783,11 @@ a:hover {
 }
 #nav .logo svg {
   max-height: 80px;
+}
+@media screen and (min-width: 1280px) {
+  #nav .logo svg {
+    max-width: 100px;
+  }
 }
 #nav .vensel {
   margin: 10px 0 0;
