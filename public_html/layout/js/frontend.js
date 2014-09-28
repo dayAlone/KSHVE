@@ -17336,6 +17336,7 @@ if ('undefined' !== typeof window.ParsleyValidator)
         return init_popup();
       },
       slidesToShow: 6,
+      infinite: false,
       customPaging: 10,
       responsive: [
         {

@@ -134,6 +134,7 @@ $(document).ready ->
 		onAfterChange: ()->
 			init_popup()
 		slidesToShow: 6
+		infinite: false
 		customPaging: 10
 		responsive: [{
 			breakpoint: 768,
