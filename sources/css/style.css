@@ -1266,7 +1266,140 @@ a:hover {
   }
 }
 .vensel2 svg {
-  max-width: 253px;
+  max-width: 100%;
+}
+@media screen and (min-width: 1024px) {
+  .vensel2 svg {
+    max-width: 253px;
+  }
+}
+#NavPopup {
+  background: #084e97;
+}
+#NavPopup .modal-close svg path {
+  fill: #fff;
+}
+#NavPopup ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 70px;
+  list-style: none;
+  border-top: 1px solid #517ab1;
+}
+#NavPopup ul a {
+  padding: 0 30px;
+  line-height: 50px;
+  color: #fff;
+  font-size: 18px;
+  border-bottom: 1px solid #517ab1;
+  float: left;
+  width: 100%;
+}
+#NavPopup ul a:hover,
+#NavPopup ul a.active {
+  background: #31a3fb;
+}
+#NavPopup .modal-dialog {
+  padding: 0;
+  margin: 0;
+  float: left;
+  width: 100%;
+}
+#NavPopup .modal-dialog .modal-content {
+  border: 0;
+  padding: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background: transparent;
+  float: left;
+  width: 100%;
+}
+#navbar {
+  height: 60px;
+  max-height: 60px;
+  line-height: 57px;
+  padding: 0 15px;
+  color: #fff;
+  display: block;
+  background: url("/layout/images/navbar.png") top center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+}
+#navbar a.search {
+  background: transparent;
+  float: right;
+}
+#navbar a.nav {
+  width: 60px;
+  height: 60px;
+  background: #084e97;
+  float: right;
+  text-align: center;
+}
+#navbar a.nav svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+@media screen and (min-width: 1024px) {
+  #navbar {
+    display: none;
+  }
+}
+#navbar a {
+  color: #fff;
+}
+#navbar a.call {
+  vertical-align: middle;
+  margin: 0 20px;
+  text-align: center;
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  text-transform: uppercase;
+  color: #174699;
+  font-family: 'Open Sans Condensed';
+  font-weight: 700;
+  margin-left: -15px;
+  position: relative;
+  line-height: 30px;
+  font-size: 10px;
+  display: inline-block;
+  width: 101px;
+  height: 29px;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+  background-image: -webkit-linear-gradient(bottom, #bde0fe 0%, #fff 100%);
+  background-image: -moz-linear-gradient(bottom, #bde0fe 0%, #fff 100%);
+  background-image: -o-linear-gradient(bottom, #bde0fe 0%, #fff 100%);
+  background-image: -ms-linear-gradient(bottom, #bde0fe 0%, #fff 100%);
+  background-image: linear-gradient(to top, #bde0fe 0%, #fff 100%);
+}
+#navbar .social a.vk svg {
+  max-height: 13px;
+}
+#navbar .social a svg {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 15px;
+  max-width: 20px;
+  margin: 0 3px;
+}
+#navbar .social a svg path {
+  fill: #fff;
+}
+#navbar .contacts {
+  display: inline-block;
+  line-height: 16px;
+  vertical-align: middle;
+  font-size: 11px;
+  margin-left: -15px;
+}
+#navbar .logo svg {
+  display: inline-block;
+  vertical-align: middle;
+  max-height: 47px;
+  max-width: 65px;
 }
 #mission {
   background: url("/layout/images/bg-info.jpg") top center;
@@ -1419,31 +1552,7 @@ a:hover {
     max-width: 100%;
   }
 }
-#contacts {
-  float: left;
-  width: 100%;
-  position: relative;
-  z-index: 200;
-  height: 60px;
-  background: #54adec url("/layout/images/bg-contacts.jpg") top center no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  line-height: 60px;
-  text-align: center;
-  font-size: 18px;
-  color: #fff;
-}
-#contacts.open a.search {
-  background: transparent;
-}
-#contacts.open #search {
-  z-index: 2;
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
-}
-#contacts #search {
+#search {
   float: left;
   width: 100%;
   -webkit-transition-property: ;
@@ -1463,7 +1572,7 @@ a:hover {
   left: 0;
   background: #084e97;
 }
-#contacts #search input {
+#search input {
   height: 28px;
   width: 100%;
   display: inline-block;
@@ -1480,10 +1589,73 @@ a:hover {
   padding: 0 6px;
   background: rgba(255,255,255,0.4);
 }
-#contacts #search input:focus {
+#search input:focus {
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+.open a.search {
+  background: transparent;
+}
+.open #search {
+  z-index: 2;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+a.search {
+  width: 60px;
+  height: 60px;
+  z-index: 3;
+  position: relative;
+  float: right;
+  line-height: 57px;
+  background: #084e97;
+  text-align: center;
+}
+a.search svg {
+  margin-left: 2px;
+  vertical-align: middle;
+  display: inline-block;
+  max-width: 18px;
+}
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 222;
+}
+.modal-close svg {
+  max-width: 35px;
+  max-height: 35px;
+}
+.modal-close svg path {
+  fill: #084e97;
+}
+#contacts {
+  float: left;
+  width: 100%;
+  position: relative;
+  z-index: 200;
+  background: #54adec url("/layout/images/bg-contacts.jpg") top center no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  line-height: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  display: none;
+  height: 0;
+}
+.index #contacts {
+  font-size: 14px;
+}
+@media screen and (min-width: 1024px) {
+  #contacts {
+    display: block;
+    height: 60px;
+  }
 }
 #contacts span {
   margin-left: 40px;
@@ -1516,46 +1688,7 @@ a:hover {
   background-image: -ms-linear-gradient(bottom, #bde0fe 0%, #fff 100%);
   background-image: linear-gradient(to top, #bde0fe 0%, #fff 100%);
 }
-#contacts a.search {
-  width: 60px;
-  height: 60px;
-  z-index: 3;
-  position: relative;
-  float: right;
-  line-height: 60px;
-  background: #084e97;
-  text-align: center;
-}
-#contacts a.search svg {
-  margin-left: 2px;
-  vertical-align: middle;
-  display: inline-block;
-  max-width: 18px;
-}
-@media screen and (max-width: 1440px) {
-  .index #contacts {
-    font-size: 16px;
-  }
-}
-@media screen and (max-width: 1366px) {
-  .index #contacts {
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 1280px) {
-  .index #contacts {
-    font-size: 14px;
-  }
-  .index #contacts span {
-    margin-left: 0px;
-  }
-}
-@media screen and (max-width: 1164px) {
-  .index #contacts {
-    font-size: 11px;
-  }
-}
-@media screen and (max-width: 1124px) {
+@media screen and (min-width: 1124px) {
   .index #contacts {
     font-size: 10px;
   }
@@ -1567,6 +1700,29 @@ a:hover {
     margin: 0 10px;
     margin-top: 4px;
     width: 100px;
+  }
+}
+@media screen and (min-width: 1164px) {
+  .index #contacts {
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .index #contacts {
+    font-size: 14px;
+  }
+  .index #contacts span {
+    margin-left: 0px;
+  }
+}
+@media screen and (min-width: 1366px) {
+  .index #contacts {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .index #contacts {
+    font-size: 16px;
   }
 }
 #banner {

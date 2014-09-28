@@ -28,8 +28,27 @@
       </div>
     <?endif;?>
   </div>
+  <div id="NavPopup" tabindex="-1" role="dialog" aria-labelledby="Call" aria-hidden="true" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <a data-dismiss="modal" href="#" class="modal-close"><?=svg('close')?></a>
+        <?php
+        $APPLICATION->IncludeComponent("bitrix:menu", "nav", 
+            array(
+                "ALLOW_MULTI_SELECT" => "Y",
+                "MENU_CACHE_TYPE"    => "A",
+                "ROOT_MENU_TYPE"     => "left",
+                "MAX_LEVEL"          => "1",
+                "USE_EXT"            => "Y",
+                ),
+            false);
+        ?>
+      </div>
+    </div>
+  </div>
   <div id="Call" tabindex="-1" role="dialog" aria-labelledby="Call" aria-hidden="true" class="modal fade">
     <div class="modal-dialog">
+      <a data-dismiss="modal" href="#" class="modal-close"><?=svg('close')?></a>
       <div class="modal-content">
       <div class="success">
         <h1 class="center">Ваше сообщение успешно отправлено. </h1>

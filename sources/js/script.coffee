@@ -62,9 +62,13 @@ size = ()->
 	$('body').width($(window).width())
 	
 	if $('body').hasClass 'index'
-		$('#mission').removeAttr 'style'
-		$('#mission').height($(window).height()-$('#news').height()-2) if $('#mission').height() + $('#news').height() < $(window).height()
 		$('#banner').height($('#mission').height()-$('#contacts').height())
+		$('#mission').removeAttr 'style'
+		if $('#mission').height() + $('#news').height() < $(window).height()
+			$('#mission').height($(window).height()-$('#news').height()-2)
+		else
+			$('#mission').height($('#mission .after').height()+2)
+		
 		$('#news .item .date .after, #news .item .date .before').width ()->
 			a = $(this).parent().find('.text').width()
 			b = $(this).parent().width()
@@ -191,6 +195,16 @@ $(document).ready ->
 			$('#contacts form').submit()
 		e.preventDefault()
 
+	$('#navbar a.search').click (e)->
+		if !$('#navbar').hasClass('open')
+			$('#navbar #search').width($('#navbar').width()-60)
+			$('#navbar').addClass('open')
+
+			$('#navbar input[type="text"]').focus()
+		else
+			$('#navbar form').submit()
+		e.preventDefault()
+
 	$('#Call .refresh').click (e)->
 		getCaptcha()
 		e.preventDefault()
@@ -198,6 +212,8 @@ $(document).ready ->
 	$(document).on 'click', (e)->
 		if $('#contacts').hasClass('open') && $(e.target).parents('#contacts').length == 0
 			$('#contacts').removeClass 'open'
+		if $('#navbar').hasClass('open') && $(e.target).parents('#navbar').length == 0
+			$('#navbar').removeClass 'open'
 
 	$('input[name="phone"]').mask('+7 (000) 000 00 00');
 

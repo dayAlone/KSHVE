@@ -758,8 +758,110 @@ a
 
 .vensel2
 	svg
-		max-width 253px
+		max-width 100%
+		@media screen and (min-width: 1024px)
+			max-width 253px
 
+#NavPopup
+	background #084e97
+	.modal-close
+		svg
+			path
+				fill white
+	ul
+		padding 0
+		margin 0
+		margin-top 70px
+		list-style none
+		border-top 1px solid #517ab1
+		a
+			padding 0 30px
+			line-height 50px
+			color white
+			font-size 18px
+			border-bottom 1px solid #517ab1
+			full-width()
+			&:hover, &.active
+				background #31a3fb
+	.modal-dialog
+		padding 0
+		margin 0
+		full-width()
+		.modal-content
+			border 0
+			padding 0
+			box-shadow none
+			background transparent
+			full-width()
+
+#navbar
+	height 60px
+	max-height 60px
+	line-height 57px
+	padding 0 15px
+	color white
+	display block
+	a.search
+		background transparent
+		float right
+	a.nav
+		width 60px
+		height 60px
+		background #084e97
+		float: right
+		text-align: center
+		svg
+			display inline-block
+			vertical-align middle
+	@media screen and (min-width: 1024px)
+		display none
+	a
+		color white
+		&.call
+			vertical-align middle
+			margin 0 20px
+			text-align center
+			cursor pointer
+			border-radius 2px
+			text-transform uppercase
+			color #174699
+			font-family 'Open Sans Condensed'
+			font-weight 700
+			margin-left -15px
+			position relative
+			line-height 30px
+			font-size 10px
+			display inline-block
+			width 101px
+			height 29px
+			box-shadow 0 1px 3px rgba(0,0,0,.3)
+			background-image linear-gradient(bottom, #bde0fe 0%, #fff 100%)
+	.social
+		a
+			&.vk
+				svg
+					max-height 13px
+			svg
+				display inline-block
+				vertical-align: middle
+				max-height 15px
+				max-width 20px
+				margin 0 3px
+				path
+					fill white
+	.contacts
+		display inline-block
+		line-height 16px
+		vertical-align: middle
+		font-size 11px
+		margin-left -15px
+	b('navbar.png', top center,null,cover)
+	.logo
+		svg
+			display inline-block
+			vertical-align middle
+			max-height 47px
+			max-width 65px
 #mission
 	b('bg-info.jpg', top center,null,cover)
 	full-width()
@@ -820,52 +922,83 @@ a
 			
 			
 	
-		
-			
+#search
+	full-width()
+	transition-property()
+	opacity 0
+	z-index -1
+	padding-left 15px
+	padding-right 15px
+	height 60px
+	input
+		height 28px
+		width 100%
+		display inline-block
+		vertical-align middle
+		box-shadow none
+		appearance none
+		border 0
+		border-radius 2px
+		line-height 20px
+		padding 0 6px
+		background rgba(255,255,255,.4)
+		&:focus
+			outline 0
+			box-shadow none
+	position absolute
+	top 0
+	left 0
+	background #084e97		
 
+.open
+	a.search
+		background transparent
+	#search
+		z-index 2
+		opacity 1			
+
+a.search
+	width 60px
+	height 60px
+	z-index 3
+	position relative
+	float right
+	line-height 57px
+	background #084e97
+	text-align center
+	svg
+		margin-left 2px
+		vertical-align middle
+		display inline-block
+		max-width 18px
+
+.modal-close
+	position absolute
+	top 15px
+	right 15px
+	z-index 222
+	svg
+		max-width 35px
+		max-height 35px
+		path
+			fill #084e97
 #contacts
 	full-width()
 	position relative
 	z-index 200
-	height 60px
 	b('bg-contacts.jpg', top center no-repeat, #54adec, cover)
 	line-height 60px
 	text-align center
 	font-size 18px
+	.index &
+		font-size 14px
 	color white
-	&.open
-		a.search
-			background transparent
-		#search
-			z-index 2
-			opacity 1
-	#search
-		full-width()
-		transition-property()
-		opacity 0
-		z-index -1
-		padding-left 15px
-		padding-right 15px
+	display none
+	height 0
+	@media screen and (min-width: 1024px)
+		display block
 		height 60px
-		input
-			height 28px
-			width 100%
-			display inline-block
-			vertical-align middle
-			box-shadow none
-			appearance none
-			border 0
-			border-radius 2px
-			line-height 20px
-			padding 0 6px
-			background rgba(255,255,255,.4)
-			&:focus
-				outline 0
-				box-shadow none
-		position absolute
-		top 0
-		left 0
-		background #084e97
+
 	span
 		margin-left 40px
 	a
@@ -889,35 +1022,7 @@ a
 			box-shadow 0 1px 3px rgba(0,0,0,.3)
 			background-image linear-gradient(bottom, #bde0fe 0%, #fff 100%)
 
-	a.search
-		width 60px
-		height 60px
-		z-index 3
-		position relative
-		float right
-		line-height 60px
-		background #084e97
-		text-align center
-		svg
-			margin-left 2px
-			vertical-align middle
-			display inline-block
-			max-width 18px
-	@media screen and (max-width: 1440px)
-		.index &
-			font-size 16px
-	@media screen and (max-width: 1366px)
-		.index &
-			font-size 15px
-	@media screen and (max-width: 1280px)
-		.index &
-			font-size 14px
-			span
-				margin-left 0px
-	@media screen and (max-width: 1164px)
-		.index &
-			font-size 11px
-	@media screen and (max-width: 1124px)
+	@media screen and (min-width: 1124px)
 		.index &
 			font-size 10px
 			span
@@ -928,6 +1033,24 @@ a
 				margin 0 10px
 				margin-top 4px
 				width 100px
+	@media screen and (min-width: 1164px)
+		.index &
+			font-size 11px
+	@media screen and (min-width: 1280px)
+		.index &
+			font-size 14px
+			span
+				margin-left 0px
+	@media screen and (min-width: 1366px)
+		.index &
+			font-size 15px
+	@media screen and (min-width: 1440px)
+		.index &
+			font-size 16px
+	
+	
+	
+	
 
 #banner
 	full-width()

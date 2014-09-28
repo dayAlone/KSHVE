@@ -9,7 +9,7 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"ok", 
-		"", 
+		"http://www.odnoklassniki.ru/dk?st.cmd=altGroupRestricted&st.groupId=foxezjudeeklejbtdms0rapkqdfeiajalasek&tkn=5203&st.layer.cmd=PopLayerClose", 
 		Array(), 
 		Array(), 
 		"" 
@@ -24,6 +24,13 @@ $aMenuLinks = Array(
 	Array(
 		"youtube", 
 		"http://www.youtube.com/user/KremlinOfficial1", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"instagram", 
+		"http://instagram.com/kremlinksk", 
 		Array(), 
 		Array(), 
 		"" 

@@ -63,7 +63,48 @@
 	    </div>
 	  </div>
 	</div>
+	<div id="navbar">
+		<div class="row">
+			<div class="col-xs-2">
+				<a href="/" class="logo"><?=svg('logo-2')?></a>
+			</div>
+			<div class="col-xs-3">
+				<span class="contacts">
+					Тел./факс: <a href="tel:84956170444">+7 (495) 617-04-44</a><br>
+					E-mail: <a href="mailto:info@kremlin-ksk.ru">info@kremlin-ksk.ru</a>
+				</span>
+			</div>
+			<div class="col-xs-2">
+				<a data-toggle="modal" data-target="#Call" class="call">перезвоните мне</a>
+			</div>
+			<div class="col-xs-3 center">
+				<div class="social">
+					<?php
+					    $APPLICATION->IncludeComponent("bitrix:menu", "social", 
+					    array(
+					        "ALLOW_MULTI_SELECT" => "Y",
+					        "MENU_CACHE_TYPE"    => "A",
+					        "ROOT_MENU_TYPE"     => "social",
+					        "MAX_LEVEL"          => "1",
+					        "USE_EXT"            => "Y",
+					        ),
+					    false);
+					?>
+			      </div>
+			</div>
+			<a data-toggle="modal" data-target="#NavPopup" class="nav"><?=svg('nav')?></a>
+			<a href="#" class="search"><?=svg('search')?></a>
+
+			
+		</div>
+		<div id="search">
+			<form action="/search/">
+				<input type="text" value="<?=$_REQUEST['q']?>" name="q">
+			</form>
+		</div>
+	</div>
 	<div id="content">
+		
 		<?if(!$isIndex):?>
 			<? require($_SERVER['DOCUMENT_ROOT'].'/include/contacts.php') ?>
 			<div class="text vignettes">
