@@ -82,10 +82,8 @@ size = ()->
 			if $.cookie('nav_position') != pos
 				$.cookie('nav_position', pos);
 
-			if !$('body').hasClass 'mobile'
-				return pos
-			else
-				return 160
+			return pos
+			
 
 	$('#content > .text').css 'min-height', $(window).height()-60
 
@@ -116,6 +114,10 @@ setCaptcha = (code)->
 $(document).ready ->
 
 	init_popup()
+
+	$(window).scroll ()->
+		$('body.mobile #nav').css
+			top: $(window).scrollTop()
 
 	$('body').addClass $.browser.platform
 

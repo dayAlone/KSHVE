@@ -97,11 +97,7 @@
         if ($.cookie('nav_position') !== pos) {
           $.cookie('nav_position', pos);
         }
-        if (!$('body').hasClass('mobile')) {
-          return pos;
-        } else {
-          return 160;
-        }
+        return pos;
       }
     });
     $('#content > .text').css('min-height', $(window).height() - 60);
@@ -135,6 +131,11 @@
   $(document).ready(function() {
     var x;
     init_popup();
+    $(window).scroll(function() {
+      return $('body.mobile #nav').css({
+        top: $(window).scrollTop()
+      });
+    });
     $('body').addClass($.browser.platform);
     if ($.browser.mobile) {
       $('body').addClass('mobile');
