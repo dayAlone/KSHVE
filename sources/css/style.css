@@ -332,6 +332,14 @@ a:hover {
 #nav .vensel {
   margin: 10px 0 0;
 }
+#nav .copyright p:last-child {
+  display: none;
+}
+@media screen and (min-height: 700px) {
+  #nav .copyright p:last-child {
+    display: block;
+  }
+}
 .index #nav .copyright p:last-child {
   display: none;
 }
