@@ -139,10 +139,15 @@ a:hover {
   margin: 15px 0 15px;
 }
 #nav .vensel svg {
-  max-width: 200px;
+  max-width: 100%;
 }
 #nav .vensel svg path {
   fill: #fff;
+}
+@media screen and (min-width: 1280px) {
+  #nav .vensel svg {
+    max-width: 200px;
+  }
 }
 #nav .content {
   position: relative;
@@ -150,6 +155,12 @@ a:hover {
   z-index: 3;
   float: left;
   width: 100%;
+  padding: 0 20px;
+}
+@media screen and (min-width: 1280px) {
+  #nav .content {
+    padding: 0 35px;
+  }
 }
 #nav ul {
   float: left;
@@ -162,30 +173,12 @@ a:hover {
 #nav ul li {
   float: left;
   width: 100%;
-  width: 230px;
-  margin-bottom: 10px;
+  width: 80%;
+  margin-bottom: 7px;
 }
-#nav ul li:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 1280px) {
+@media screen and (min-height: 650px) {
   #nav ul li {
-    width: 75%;
-  }
-}
-@media screen and (max-width: 1024px) {
-  #nav ul li {
-    width: 65%;
-  }
-}
-@media screen and (max-width: 1024px) {
-  #nav ul li {
-    line-height: 16px;
-  }
-}
-@media screen and (max-height: 750px) {
-  #nav ul li {
-    margin-bottom: 8px;
+    margin-bottom: 5px;
   }
 }
 @media screen and (min-height: 800px) {
@@ -193,45 +186,44 @@ a:hover {
     margin-bottom: 10px;
   }
 }
-@media screen and (min-height: 880px) {
-  #nav ul li {
-    margin-bottom: 15px;
-  }
+#nav ul li:last-child {
+  margin-bottom: 0;
 }
-#nav ul a {
+#nav ul li a {
   color: #fff;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 13px;
+  line-height: 15px;
   display: inline-block;
 }
-@media screen and (max-width: 1024px) {
-  #nav ul a {
-    font-size: 13px;
-  }
-}
-@media screen and (max-height: 750px) {
-  #nav ul a {
-    line-height: 14px;
+@media screen and (min-width: 1280px) {
+  #nav ul li a {
     font-size: 14px;
+    line-height: 16px;
   }
 }
-@media screen and (min-height: 880px) {
-  #nav ul a {
-    line-height: 17px;
+@media screen and (min-height: 800px) {
+  #nav ul li a {
+    font-size: 15px;
+    line-height: 18px;
   }
 }
-#nav ul a.active {
+#nav ul li a.active {
   color: #253665;
 }
-#nav ul a:hover {
+#nav ul li a:hover {
   color: #3662a5;
 }
 #nav .footer {
   position: absolute;
   width: 100%;
   left: 0;
-  padding: 0 35px;
+  padding: 0 20px;
   bottom: 15px;
+}
+@media screen and (min-width: 1280px) {
+  #nav .footer {
+    padding: 0 35px;
+  }
 }
 #nav .footer .vensel {
   margin-bottom: 10px;
@@ -239,9 +231,8 @@ a:hover {
 #nav .footer .address {
   float: left;
   width: 100%;
-  font-size: 15px;
-  line-height: 20px;
-  white-space: nowrap;
+  font-size: 12px;
+  line-height: 14px;
 }
 #nav .footer .copyright {
   float: left;
@@ -259,7 +250,7 @@ a:hover {
   line-height: 30px;
   float: left;
   width: 100%;
-  margin: 17px 0 25px;
+  margin: 12px 0 15px;
 }
 #nav .footer .social a {
   margin: 0 10px;
@@ -280,26 +271,11 @@ a:hover {
 #nav .footer .social a:last-child {
   margin-right: 0;
 }
-#nav .footer .social a.gp svg {
-  max-width: 20px;
-}
-#nav .footer .social a.vk svg {
-  max-width: 14px;
-}
-#nav .footer .social a.ok svg {
-  max-height: 19px;
-}
-#nav .footer .social a.mr svg {
-  max-height: 19px;
-}
-#nav .footer .social a.tw svg {
-  max-width: 20px;
-}
 #nav .footer .social a svg {
   vertical-align: middle;
   display: inline-block;
-  max-height: 20px;
-  max-width: 25px;
+  max-height: 15px;
+  max-width: 20px;
   width: auto;
 }
 #nav .footer .social a svg path {
@@ -340,128 +316,34 @@ a:hover {
   position: absolute;
   max-width: 30px;
 }
+#nav .logo {
+  margin-top: 25px;
+  float: left;
+  width: 100%;
+}
 #nav .logo svg {
   max-height: 80px;
-}
-@media screen and (max-width: 1024px) {
-  #nav .logo svg {
-    max-width: 80%;
-  }
 }
 #nav .vensel {
   margin: 10px 0 0;
 }
-@media screen and (max-width: 1024px) {
-  #nav .vensel svg {
-    max-width: 100%;
-  }
-}
-@media screen and (min-width: 1366px) {
-  #nav .copyright p {
-    font-size: 10px;
-  }
-}
-@media screen and (min-width: 1280px) {
-  #nav .copyright p {
-    font-size: 9px;
-  }
-  .index #nav .copyright p:last-child {
-    display: none;
-  }
-}
-@media screen and (min-height: 800px) {
-  .index #nav .copyright p:last-child {
-    display: none;
-  }
-}
-@media screen and (min-height: 850px) {
-  #nav .copyright p:last-child {
-    display: block;
-  }
-}
-#nav .content .social {
-  margin: 8px 0;
-}
-@media screen and (max-width: 1366px) {
-  #nav .content .social a {
-    margin: 0 8px;
-  }
-}
-@media screen and (max-width: 1280px) {
-  #nav .content .social a {
-    margin: 0 7px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  #nav .content .social a {
-    margin: 0 5px;
-  }
-}
-#nav .content .social svg {
-  max-height: 13px !important;
-}
-@media screen and (max-width: 1366px) {
-  #nav .content .social svg {
-    max-height: 16px !important;
-  }
-}
-@media screen and (max-width: 1024px) {
-  #nav .content .social svg {
-    max-height: 11px !important;
-  }
-}
-#nav .content .footer .vensel {
-  margin-bottom: 0px;
-  margin-top: 0;
-}
-#nav .content .address {
-  font-size: 13px;
-}
-@media screen and (max-width: 1152px) {
-  #nav .content .address {
-    font-size: 12px;
-    width: 100%;
-    white-space: normal;
-    line-height: 15px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  #nav .content .address {
-    font-size: 11px;
-    line-height: 14px;
-  }
-}
-@media screen and (min-height: 800px) {
-  #nav .logo svg {
-    max-height: 100px;
-  }
-  #nav .vensel {
-    margin: 15px 0 0;
-  }
-}
-@media screen and (min-height: 880px) {
-  #nav .logo svg {
-    max-height: 110px;
-  }
+#nav .copyright p:last-child {
+  display: none;
 }
 @media screen and (min-width: 1024px) {
   #nav {
     display: block;
+    width: 200px;
   }
 }
-@media screen and (max-width: 1366px) {
-  #nav {
-    width: 270px;
-  }
-}
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1280px) {
   #nav {
     width: 260px;
   }
 }
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1366px) {
   #nav {
-    width: 200px;
+    width: 270px;
   }
 }
 #content {
@@ -1311,7 +1193,7 @@ a:hover {
 }
 @media screen and (min-width: 1024px) {
   #content {
-    padding-left: 300px;
+    padding-left: 200px;
   }
   #content > .text .news .item a.title,
   #content > .text .list .item a.title {
@@ -1808,11 +1690,6 @@ a:hover {
 @media screen and (max-width: 1152px) {
   #banner .partners .title {
     margin-left: 15px;
-  }
-}
-@media screen and (max-width: 1024px) {
-  #banner .partners img {
-    margin: 0 20px;
   }
 }
 #banner #img {

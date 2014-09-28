@@ -1,13 +1,6 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"gp", 
-		"https://plus.google.com/u/0/110975569081323250214/posts", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"vk", 
 		"http://vk.com/kremlinksk", 
 		Array(), 
@@ -29,22 +22,8 @@ $aMenuLinks = Array(
 		"" 
 	),
 	Array(
-		"twitter", 
-		"https://twitter.com/kremlinksk", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
 		"youtube", 
 		"http://www.youtube.com/user/KremlinOfficial1", 
-		Array(), 
-		Array(), 
-		"" 
-	),
-	Array(
-		"mailru", 
-		"", 
 		Array(), 
 		Array(), 
 		"" 

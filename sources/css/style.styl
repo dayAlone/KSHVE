@@ -91,7 +91,6 @@ a
 	height 100%
 	top 0
 	left 0
-	
 	position fixed
 	.mobile &
 		position absolute
@@ -110,12 +109,17 @@ a
 		svg
 			path
 				fill white
-			max-width 200px
+			max-width 100%
+			@media screen and (min-width: 1280px)
+				max-width 200px
 	.content
 		position relative
 		height 100%
 		z-index 3
 		full-width()
+		padding 0 20px 
+		@media screen and (min-width: 1280px)
+			padding 0 35px
 	ul
 		full-width()
 		padding 0
@@ -124,52 +128,44 @@ a
 		position absolute
 		li
 			full-width()
-			width 230px
-			margin-bottom 10px
+			width 80%
+			margin-bottom 7px
+			@media screen and (min-height: 650px)
+				margin-bottom: 5px
+			@media screen and (min-height: 800px)
+				margin-bottom: 10px
 			&:last-child
 				margin-bottom 0
-			@media screen and (max-width: 1280px)
-				width 75%
-			@media screen and (max-width: 1024px)
-				width 65%
-			@media screen and (max-width: 1024px)
-				line-height 16px
-			@media screen and (max-height: 750px)
-				margin-bottom 8px
-			@media screen and (min-height: 800px)
-				margin-bottom 10px
-			@media screen and (min-height: 880px)
-				margin-bottom 15px
-			
-		a
-			color white	
-			font-size 15px
-			line-height 18px
-			display inline-block
-			@media screen and (max-width: 1024px)
+			a
+				color white	
 				font-size 13px
-			@media screen and (max-height: 750px)
-				line-height 14px
-				font-size 14px
-			@media screen and (min-height: 880px)
-				line-height 17px
-			&.active
-				color #253665
-			&:hover
-				color #3662a5
+				line-height 15px
+				display inline-block
+				@media screen and (min-width: 1280px)
+					font-size 14px
+					line-height 16px
+				@media screen and (min-height: 800px)
+					font-size 15px
+					line-height 18px
+				&.active
+					color #253665
+				&:hover
+					color #3662a5
+	
 	.footer
 		position absolute
 		width 100%
 		left 0
-		padding 0 35px
+		padding 0 20px
+		@media screen and (min-width: 1280px)
+			padding 0 35px
 		bottom 15px
 		.vensel
 			margin-bottom 10px
 		.address
 			full-width()
-			font-size 15px
-			line-height 20px
-			white-space no-wrap
+			font-size 12px
+			line-height 14px
 		.copyright
 			full-width()
 			font-size 11px
@@ -180,7 +176,7 @@ a
 			text-align center
 			line-height 30px
 			full-width()
-			margin 17px 0 25px 
+			margin 12px 0 15px 
 			a
 				margin 0 10px
 				vertical-align middle
@@ -192,26 +188,11 @@ a
 					margin-left 0
 				&:last-child
 					margin-right 0
-				&.gp
-					svg
-						max-width 20px
-				&.vk
-					svg
-						max-width 14px
-				&.ok
-					svg
-						max-height 19px
-				&.mr
-					svg
-						max-height 19px
-				&.tw
-					svg
-						max-width 20px
 				svg
 					vertical-align middle
 					display inline-block
-					max-height 20px
-					max-width 25px
+					max-height 15px
+					max-width 20px
 					width auto
 					path
 						fill white
@@ -244,85 +225,26 @@ a
 				max-width 30px
 
 	.logo
+		margin-top: 25px
+		full-width()
 		svg
 			max-height 80px
-			@media screen and (max-width: 1024px)
-				max-width 80%
 	.vensel
 		margin 10px 0 0
-		@media screen and (max-width: 1024px)
-			svg
-				max-width 100%
 	.copyright
 		p
-			@media screen and (min-width: 1366px)
-				font-size 10px
-			@media screen and (min-width: 1280px)
-				font-size 9px
-				&:last-child
-					.index &
-						display none
-			@media screen and (min-height: 800px)
-				&:last-child
-					.index &
-						display none
-			@media screen and (min-height: 850px)
-				&:last-child
-					display block
-	.content
-		.social
-			margin 8px 0
-			a
-				@media screen and (max-width: 1366px)
-					margin 0 8px
-				@media screen and (max-width: 1280px)
-					margin 0 7px
-				@media screen and (max-width: 1024px)
-					margin 0 5px
-			svg
-				max-height 13px !important
-				@media screen and (max-width: 1366px)
-					max-height 16px !important
-				@media screen and (max-width: 1024px)
-					max-height 11px !important
-		.footer
-			.vensel
-				margin-bottom 0px
-				margin-top 0
-		.address
-			font-size 13px
-			@media screen and (max-width: 1152px)
-				font-size 12px
-				width 100%
-				white-space normal
-				line-height 15px
-			@media screen and (max-width: 1024px)
-				font-size 11px 
-				line-height 14px 
-	
-	@media screen and (min-height: 800px)
-		.logo
-			svg
-				max-height 100px
-		.vensel
-			margin 15px 0 0
-				
-
-	@media screen and (min-height: 880px)
-		.logo
-			svg
-				max-height 110px
-
-	
+			&:last-child
+				display none
 	display none
 	@media screen and (min-width: 1024px)
 		display block
-	@media screen and (max-width: 1366px)
-		width 270px
-	@media screen and (max-width: 1280px)
-		width 260px
-	@media screen and (max-width: 1024px)
 		width 200px
+	@media screen and (min-width: 1280px)
+		width 260px
+	@media screen and (min-width: 1366px)
+		width 270px
+	
+		
 
 #content
 	full-width()
@@ -783,7 +705,7 @@ a
 	
 	padding-left 0
 	@media screen and (min-width: 1024px)
-		padding-left 300px
+		padding-left 200px
 		> .text
 			.news .item, .list .item
 				a.title
@@ -1104,9 +1026,6 @@ a
 		@media screen and (max-width: 1152px)
 			.title
 				margin-left 15px
-		@media screen and (max-width: 1024px)
-			img
-				margin 0 20px
 
 	#img
 		position absolute
