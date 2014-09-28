@@ -1685,7 +1685,18 @@ a:hover {
   text-transform: uppercase;
 }
 #banner .partners img {
-  max-height: 44px;
+  max-height: 34px;
+  max-width: 80px;
+}
+@media screen and (min-width: 1152px) {
+  #banner .partners img {
+    max-width: 90px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  #banner .partners img {
+    max-width: 100px;
+  }
 }
 @media screen and (max-width: 1152px) {
   #banner .partners .title {

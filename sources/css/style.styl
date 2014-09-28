@@ -1022,7 +1022,14 @@ a
 			color white
 			text-transform uppercase
 		img
-			max-height 44px
+			max-height 34px
+			max-width 80px
+			@media screen and (min-width: 1152px)
+				max-width 90px
+			@media screen and (min-width: 1280px)
+				max-width 100px
+
+
 		@media screen and (max-width: 1152px)
 			.title
 				margin-left 15px
