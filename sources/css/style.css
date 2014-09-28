@@ -1401,6 +1401,10 @@ a:hover {
   max-height: 47px;
   max-width: 65px;
 }
+.fb:like {
+  float: left;
+  margin-top: -3px;
+}
 #mission {
   background: url("/layout/images/bg-info.jpg") top center;
   -webkit-background-size: cover;

@@ -12032,6 +12032,11 @@ a:hover {
 
   vertical-align: middle;
 }
+.fb:like {
+  float: left;
+
+  margin-top: -3px;
+}
 #mission {
   position: relative;
 
