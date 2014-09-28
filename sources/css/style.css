@@ -29,6 +29,9 @@ body.logos #content .list .item .image {
 body.trainers #content .list .item .image {
   background-position: top center;
 }
+.pp_overlay {
+  min-width: 768px;
+}
 .center {
   text-align: center;
 }

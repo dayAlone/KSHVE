@@ -13588,11 +13588,6 @@ fotoramaVersion="4.6.0",function(a,b,c,d,e){"use strict";function f(a){var b="be
 							</div> \
 							</div> \
 						</div> \
-						<div class="pp_bottom"> \
-							<div class="pp_left"></div> \
-							<div class="pp_middle"></div> \
-							<div class="pp_right"></div> \
-						</div> \
 					</div> \
 					<div class="pp_overlay"></div>',
 			gallery_markup: '<div class="pp_gallery"> \
@@ -13620,7 +13615,8 @@ fotoramaVersion="4.6.0",function(a,b,c,d,e){"use strict";function f(a){var b="be
 		pp_contentHeight, pp_contentWidth, pp_containerHeight, pp_containerWidth,
 		
 		// Window size
-		windowHeight = $(window).height(), windowWidth = $(window).width(),
+		windowHeight = $(window).height(), 
+		windowWidth = $('body').width(),
 
 		// Global elements
 		pp_slideshow;
@@ -13744,7 +13740,7 @@ fotoramaVersion="4.6.0",function(a,b,c,d,e){"use strict";function f(a){var b="be
 			// If the size is % based, calculate according to window dimensions
 			percentBased=false;
 			if(movie_height.indexOf('%') != -1) { movie_height = parseFloat(($(window).height() * parseFloat(movie_height) / 100) - 150); percentBased = true; }
-			if(movie_width.indexOf('%') != -1) { movie_width = parseFloat(($(window).width() * parseFloat(movie_width) / 100) - 150); percentBased = true; }
+			if(movie_width.indexOf('%') != -1) { movie_width = parseFloat(($('body').width() * parseFloat(movie_width) / 100) - 150); percentBased = true; }
 			
 			// Fade the holder
 			$pp_pic_holder.fadeIn(function(){
@@ -14221,7 +14217,7 @@ fotoramaVersion="4.6.0",function(a,b,c,d,e){"use strict";function f(a){var b="be
 		};
 	
 		function _resize_overlay() {
-			windowHeight = $(window).height(), windowWidth = $(window).width();
+			windowHeight = $(window).height(), windowWidth = $('body').width();
 			
 			if(typeof $pp_overlay != "undefined") $pp_overlay.height($(document).height()).width(windowWidth);
 		};
@@ -14344,7 +14340,7 @@ fotoramaVersion="4.6.0",function(a,b,c,d,e){"use strict";function f(a){var b="be
 				.css({
 					'opacity':0,
 					'height':$(document).height(),
-					'width':$(window).width()
+					'width':$('body').width()
 					})
 				.bind('click',function(){
 					if(!settings.modal) $.prettyPhoto.close();
