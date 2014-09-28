@@ -327,7 +327,7 @@ a:hover {
 #nav .vensel {
   margin: 10px 0 0;
 }
-#nav .copyright p:last-child {
+.index #nav .copyright p:last-child {
   display: none;
 }
 @media screen and (min-width: 1024px) {
