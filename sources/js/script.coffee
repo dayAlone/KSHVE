@@ -59,45 +59,44 @@ vignettes = ()->
 			.width($(this).width()-12)
 
 size = ()->
-	$('body').width($(window).width())
 	
-	if $('body').hasClass 'index'
-		$('#banner').height($('#mission').height()-$('#contacts').height())
-		$('#mission').removeAttr 'style'
-		if $('#mission').height() + $('#news').height() < $(window).height()
-			$('#mission').height($(window).height()-$('#news').height()-2)
-		else
-			$('#mission').height($('#mission .after').height()+2)
-		
-		$('#news .item .date .after, #news .item .date .before').width ()->
-			a = $(this).parent().find('.text').width()
-			b = $(this).parent().width()
-			return (b-a-40)/2
-		$('#slide').height($('#banner').height()-110)
-
-	$('#nav ul').css
-		'top' : ()->
-			a = $('#nav').height()
-			b = $('#nav .footer').height() + parseInt($('#nav .footer').css('bottom').split('px')[0])
-			c = $('#nav p.center').height() + parseInt($('#nav .content').css('padding-top').split('px')[0])
-			d = $('#nav ul').height()
-			z = (a - b - c)/2
-			pos = c + z - d/2
-			if $.cookie('nav_position') != pos
-				$.cookie('nav_position', pos);
-
-			return pos
-			
-
-	$('#content > .text').css 'min-height', $(window).height()-60
-
 	vignettes()
 
-	$('.text .news .item:last, .text .reviews .item:last, .vignettes *').one 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', ()->
-		vignettes()
+	delay 100, ()->
+		$('body').width($(window).width())
+		
+		if $('body').hasClass 'index'
+			$('#banner').height($('#mission').height()-$('#contacts').height())
+			$('#mission .content').height()
+			$('#news .item .date .after, #news .item .date .before').width ()->
+				a = $(this).parent().find('.text').width()
+				b = $(this).parent().width()
+				return (b-a-40)/2
+			$('#slide').height($('#banner').height()-110)
 
-	
-	autoHeight($('.text .news, .text .reviews, .text .list'))
+		$('#nav ul').css
+			'top' : ()->
+				a = $('#nav').height()
+				b = $('#nav .footer').height() + parseInt($('#nav .footer').css('bottom').split('px')[0])
+				c = $('#nav p.center').height() + parseInt($('#nav .content').css('padding-top').split('px')[0])
+				d = $('#nav ul').height()
+				z = (a - b - c)/2
+				pos = c + z - d/2
+				if $.cookie('nav_position') != pos
+					$.cookie('nav_position', pos);
+
+				return pos
+				
+
+		$('#content > .text').css 'min-height', $(window).height()-60
+
+		
+
+		$('.text .news .item:last, .text .reviews .item:last, .vignettes *').one 'transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd', ()->
+			vignettes()
+
+		
+		autoHeight($('.text .news, .text .reviews, .text .list'))
 
 	return true
 
@@ -240,7 +239,6 @@ $(document).ready ->
 
 	$('.ribbon span').arctext
 		radius: 1200
-
 
 	delay 300, ()->
 		size()

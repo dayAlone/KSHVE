@@ -114,6 +114,8 @@ module.exports = (grunt)->
 		# Конвертируем CoffeeScript -> JavaScript
 		coffee:
 			compile:
+				options:
+					bare: false
 				files: 
 					'<%= path.sources %>/js/script.js' : ['<%= files.js.develop %>']
 

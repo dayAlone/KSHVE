@@ -6,8 +6,10 @@
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <title><?$APPLICATION->ShowTitle();?><?=(!$isIndex?" :: Кремлевская школа верховой езды":"")?></title>
+  
   <script type="text/javascript" src="/layout/js/frontend.js"></script>
   <?php $APPLICATION->ShowHead();?>
+  
   <link href="http://fonts.googleapis.com/css?family=Oranienbaum|Open+Sans:400,600|Open+Sans+Condensed:300,700&amp;subset=latin,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
   <link href="/layout/css/frontend.css" rel="stylesheet">
 </head>
