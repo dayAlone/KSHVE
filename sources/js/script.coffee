@@ -81,7 +81,11 @@ size = ()->
 			pos = c + z - d/2
 			if $.cookie('nav_position') != pos
 				$.cookie('nav_position', pos);
-			return pos
+
+			if !$('body').hasClass 'mobile'
+				return pos
+			else
+				return 160
 
 	$('#content > .text').css 'min-height', $(window).height()-60
 
@@ -113,6 +117,10 @@ $(document).ready ->
 
 	init_popup()
 
+	$('body').addClass $.browser.platform
+
+	if $.browser.mobile
+		$('body').addClass 'mobile'
 	$('a.show-form').click (e)->
 		$(this).parents('.content').find('form:hidden').slideDown ()->
 			vignettes()
@@ -221,6 +229,6 @@ $(document).ready ->
 	x = undefined
 	$(window).resize ->
 		clearTimeout(x)
-		x = delay 400, ()->
+		x = delay 300, ()->
 			size()
    

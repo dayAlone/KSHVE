@@ -10546,6 +10546,9 @@ a:hover {
   border-bottom: 0;
   border-left: 1px solid #fff;
 }
+.mobile #nav {
+  position: absolute;
+}
 #nav p.center {
   margin-bottom: 0;
 }
@@ -10593,17 +10596,63 @@ a:hover {
 
   width: 100%;
   width: 230px;
-  margin-bottom: 9px;
+  margin-bottom: 10px;
+}
+#nav ul li:last-child {
+  margin-bottom: 0;
+}
+@media screen and (max-width: 1280px) {
+  #nav ul li {
+    width: 75%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #nav ul li {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 1024px) {
+  #nav ul li {
+    line-height: 16px;
+  }
+}
+@media screen and (max-height: 750px) {
+  #nav ul li {
+    margin-bottom: 8px;
+  }
+}
+@media screen and (min-height: 800px) {
+  #nav ul li {
+    margin-bottom: 10px;
+  }
+}
+@media screen and (min-height: 880px) {
+  #nav ul li {
+    margin-bottom: 15px;
+  }
 }
 #nav ul a {
+  display: inline-block;
+
   color: #fff;
 
-  font-size: 18px;
-  line-height: 17px;
+  font-size: 15px;
+  line-height: 18px;
 }
 @media screen and (max-width: 1024px) {
   #nav ul a {
     font-size: 13px;
+  }
+}
+@media screen and (max-height: 750px) {
+  #nav ul a {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+@media screen and (min-height: 880px) {
+  #nav ul a {
+    line-height: 17px;
   }
 }
 #nav ul a.active {
@@ -10768,15 +10817,12 @@ a:hover {
     max-width: 100%;
   }
 }
-@media screen and (max-width: 1366px) {
+@media screen and (min-width: 1366px) {
   #nav .copyright p {
     font-size: 10px;
   }
-  #nav .copyright p:last-child {
-    display: none;
-  }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1280px) {
   #nav .copyright p {
     font-size: 9px;
   }
@@ -10784,33 +10830,14 @@ a:hover {
     display: none;
   }
 }
-#nav ul a {
-  font-size: 15px;
-}
-@media screen and (max-width: 1024px) {
-  #nav ul a {
-    font-size: 13px;
+@media screen and (min-height: 800px) {
+  #nav .copyright p:last-child {
+    display: none;
   }
 }
-#nav ul li {
-  margin-bottom: 7px;
-}
-#nav ul li:last-child {
-  margin-bottom: 0;
-}
-@media screen and (max-width: 1280px) {
-  #nav ul li {
-    width: 75%;
-  }
-}
-@media screen and (max-width: 1024px) {
-  #nav ul li {
-    width: 65%;
-  }
-}
-@media screen and (max-width: 1024px) {
-  #nav ul li {
-    line-height: 16px;
+@media screen and (min-height: 850px) {
+  #nav .copyright p:last-child {
+    display: block;
   }
 }
 #nav .content .social {
@@ -10874,22 +10901,10 @@ a:hover {
   #nav .vensel {
     margin: 15px 0 0;
   }
-  #nav ul a {
-    font-size: 16px;
-  }
-  #nav ul li {
-    margin-bottom: 9px;
-  }
 }
 @media screen and (min-height: 880px) {
   #nav .logo svg {
     max-height: 110px;
-  }
-  #nav ul a {
-    font-size: 17px;
-  }
-  #nav ul li {
-    margin-bottom: 20px;
   }
 }
 @media screen and (max-width: 1366px) {
@@ -10905,11 +10920,6 @@ a:hover {
 @media screen and (max-width: 1024px) {
   #nav {
     width: 200px;
-  }
-}
-@media screen and (max-height: 750px) {
-  #nav ul li {
-    margin-bottom: 3px;
   }
 }
 #content {

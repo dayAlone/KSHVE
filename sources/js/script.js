@@ -97,7 +97,11 @@
         if ($.cookie('nav_position') !== pos) {
           $.cookie('nav_position', pos);
         }
-        return pos;
+        if (!$('body').hasClass('mobile')) {
+          return pos;
+        } else {
+          return 160;
+        }
       }
     });
     $('#content > .text').css('min-height', $(window).height() - 60);
@@ -131,6 +135,10 @@
   $(document).ready(function() {
     var x;
     init_popup();
+    $('body').addClass($.browser.platform);
+    if ($.browser.mobile) {
+      $('body').addClass('mobile');
+    }
     $('a.show-form').click(function(e) {
       $(this).parents('.content').find('form:hidden').slideDown(function() {
         return vignettes();
@@ -248,7 +256,7 @@
     x = void 0;
     return $(window).resize(function() {
       clearTimeout(x);
-      return x = delay(400, function() {
+      return x = delay(300, function() {
         return size();
       });
     });

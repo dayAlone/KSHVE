@@ -18,7 +18,8 @@
     "slick-carousel": "*",
     "jquery.cookie": "~1.4.1",
     "parsleyjs": "~2.0.3",
-    "jQuery-Mask-Plugin": "~1.6.5"
+    "jQuery-Mask-Plugin": "~1.6.5",
+    "jquery.browser": "~0.0.6"
   },
   "moduleType": [
     "amd",

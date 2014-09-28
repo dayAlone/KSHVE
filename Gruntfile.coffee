@@ -32,6 +32,7 @@ module.exports = (grunt)->
 							'./bower_components/jquery.cookie/jquery.cookie.js'
 							'./bower_components/jQuery-Mask-Plugin/jquery.mask.js'
 							'./bower_components/parsleyjs/dist/parsley.js'
+							'./bower_components/jquery.browser/dist/jquery.browser.js'
 							'<%= path.sources %>/js/script.js'
 						]
 
