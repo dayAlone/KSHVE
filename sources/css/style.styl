@@ -260,10 +260,12 @@ a
 			@media screen and (min-width: 1280px)
 				font-size 9px
 				&:last-child
-					display none
+					.index &
+						display none
 			@media screen and (min-height: 800px)
 				&:last-child
-					display none
+					.index &
+						display none
 			@media screen and (min-height: 850px)
 				&:last-child
 					display block
@@ -311,6 +313,10 @@ a
 			svg
 				max-height 110px
 
+	
+	display none
+	@media screen and (min-width: 1024px)
+		display block
 	@media screen and (max-width: 1366px)
 		width 270px
 	@media screen and (max-width: 1280px)
@@ -321,7 +327,6 @@ a
 #content
 	full-width()
 	overflow hidden
-	padding-left 300px
 	min-height 100%
 	.second-nav
 		margin 30px 0
@@ -775,9 +780,24 @@ a
 		margin 10px 0 40px 0
 		a
 			margin 0 3px
-	@media screen and (max-width: 1366px)
-		padding-left 270px
-	@media screen and (max-width: 1280px)
+	
+	padding-left 0
+	@media screen and (min-width: 1024px)
+		padding-left 300px
+		> .text
+			.news .item, .list .item
+				a.title
+					font-size 16px
+					line-height 18px
+				p
+					font-size 13px
+	@media screen and (min-width: 1152px)
+		> .row
+			> .col-md-4
+				width 40%
+			> .col-md-8
+				width 60%
+	@media screen and (min-width: 1280px)
 		padding-left 260px
 		> .text
 			.news .item, .list .item
@@ -786,21 +806,11 @@ a
 					line-height 22px
 				p
 					font-size 14px
-	@media screen and (max-width: 1152px)
-		> .row
-			> .col-md-4
-				width 40%
-			> .col-md-8
-				width 60%
-	@media screen and (max-width: 1024px)
-		padding-left 200px
-		> .text
-			.news .item, .list .item
-				a.title
-					font-size 16px
-					line-height 18px
-				p
-					font-size 13px
+	@media screen and (min-width: 1366px)
+		padding-left 270px
+	
+
+	
 
 .ribbon
 	b('svg/ribbon1.svg', no-repeat center top, null, contain)

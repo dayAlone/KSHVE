@@ -61,6 +61,7 @@ a:hover {
   position: fixed;
   color: #fff;
   min-height: 670px;
+  display: none;
 }
 #nav .content {
   float: left;
@@ -364,12 +365,12 @@ a:hover {
   #nav .copyright p {
     font-size: 9px;
   }
-  #nav .copyright p:last-child {
+  .index #nav .copyright p:last-child {
     display: none;
   }
 }
 @media screen and (min-height: 800px) {
-  #nav .copyright p:last-child {
+  .index #nav .copyright p:last-child {
     display: none;
   }
 }
@@ -443,6 +444,11 @@ a:hover {
     max-height: 110px;
   }
 }
+@media screen and (min-width: 1024px) {
+  #nav {
+    display: block;
+  }
+}
 @media screen and (max-width: 1366px) {
   #nav {
     width: 270px;
@@ -462,8 +468,8 @@ a:hover {
   float: left;
   width: 100%;
   overflow: hidden;
-  padding-left: 300px;
   min-height: 100%;
+  padding-left: 0;
 }
 #content .second-nav {
   margin: 30px 0;
@@ -1303,12 +1309,29 @@ a:hover {
 #content .pages a {
   margin: 0 3px;
 }
-@media screen and (max-width: 1366px) {
+@media screen and (min-width: 1024px) {
   #content {
-    padding-left: 270px;
+    padding-left: 300px;
+  }
+  #content > .text .news .item a.title,
+  #content > .text .list .item a.title {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  #content > .text .news .item p,
+  #content > .text .list .item p {
+    font-size: 13px;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 1152px) {
+  #content > .row > .col-md-4 {
+    width: 40%;
+  }
+  #content > .row > .col-md-8 {
+    width: 60%;
+  }
+}
+@media screen and (min-width: 1280px) {
   #content {
     padding-left: 260px;
   }
@@ -1322,26 +1345,9 @@ a:hover {
     font-size: 14px;
   }
 }
-@media screen and (max-width: 1152px) {
-  #content > .row > .col-md-4 {
-    width: 40%;
-  }
-  #content > .row > .col-md-8 {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 1366px) {
   #content {
-    padding-left: 200px;
-  }
-  #content > .text .news .item a.title,
-  #content > .text .list .item a.title {
-    font-size: 16px;
-    line-height: 18px;
-  }
-  #content > .text .news .item p,
-  #content > .text .list .item p {
-    font-size: 13px;
+    padding-left: 270px;
   }
 }
 .ribbon {
