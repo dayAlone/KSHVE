@@ -10434,7 +10434,7 @@ html {
   min-height: 100%;
 }
 body {
-  min-width: 980px;
+  min-width: 768px;
   height: 100%;
 
   font-family: 'Georgia', 'Times New Roman', serif;
