@@ -39,32 +39,32 @@
         <input type="hidden" name="group_id" value="5">
         <h1>Заявка на обратный звонок</h1>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-xs-4">
             <label>Ваше имя *</label>
           </div>
-          <div class="col-md-8">
+          <div class="col-xs-8">
             <input type="text" name="name" required>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-xs-4">
             <label>Номер телефона *</label>
           </div>
-          <div class="col-md-8">
+          <div class="col-xs-8">
             <input type="text" name="phone" data-parsley-pattern="/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}/" required data-parsley-trigger="change">
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4">
+          <div class="col-xs-4">
             <label><span>Какой вид услуги<br>Вас заинтересовал?</span></label>
           </div>
-          <div class="col-md-8">
+          <div class="col-xs-8">
             <textarea name="service"></textarea>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-4"><small class="info">Поля, отмеченные * <br>- обязательны для заполнения.</small></div>
-          <div class="col-md-8">
+          <div class="col-xs-4"><small class="info">Поля, отмеченные * <br>- обязательны для заполнения.</small></div>
+          <div class="col-xs-8">
             <p>Введите код с картинки</p>
             <div class="row">
               <?
@@ -75,17 +75,17 @@
                 $code=$cpt->GetSID();
               ?>
               <input type="hidden" name="captcha_code" value="<?=$code?>">
-              <div class="col-md-5"><img class="captcha_img" src="/include/captcha.php?captcha_sid=<?=$code?>"></div>
-              <div class="col-md-2"><a class="refresh"><img src="/layout/images/refresh.png"></a></div>
-              <div class="col-md-1"><span class="here">сюда</span></div>
-              <div class="col-md-4">
+              <div class="col-xs-5"><img class="captcha_img" src="/include/captcha.php?captcha_sid=<?=$code?>"></div>
+              <div class="col-xs-2"><a class="refresh"><img src="/layout/images/refresh.png"></a></div>
+              <div class="col-xs-1"><span class="here">сюда</span></div>
+              <div class="col-xs-4">
                 <input name="captcha_word" type="text" required>
               </div>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-offset-4 col-md-8">
+          <div class="col-xs-offset-4 col-xs-8">
             <input type="submit" value="отправить">
           </div>
         </div>
