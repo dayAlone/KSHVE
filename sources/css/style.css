@@ -1870,7 +1870,7 @@ a.search svg {
 @media screen and (min-width: 1280px) {
   #banner .partners img {
     max-width: 120px;
-    max-height: 34px;
+    max-height: 33px;
   }
 }
 @media screen and (max-width: 1152px) {
