@@ -73,7 +73,9 @@ size = ()->
 				b = $(this).parent().width()
 				return (b-a-40)/2
 			$('#slide').height($('#banner').height()-110)
-
+			if $('#mission').height() + $('#news').height() < $(window).height()
+				$('#mission').height($(window).height()-$('#news').height()-2)
+				
 		$('#nav ul').css
 			'top' : ()->
 				a = $('#nav').height()
