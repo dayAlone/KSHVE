@@ -12569,16 +12569,18 @@ a.search svg {
 }
 #banner .partners img {
   max-width: 80px;
-  max-height: 34px;
+  max-height: 23px;
 }
 @media screen and (min-width: 1152px) {
   #banner .partners img {
     max-width: 90px;
+    max-height: 27px;
   }
 }
 @media screen and (min-width: 1280px) {
   #banner .partners img {
-    max-width: 100px;
+    max-width: 120px;
+    max-height: 34px;
   }
 }
 @media screen and (max-width: 1152px) {
