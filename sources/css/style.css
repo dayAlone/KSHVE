@@ -384,8 +384,13 @@ a:hover {
 }
 #content .second-nav .frame a {
   color: #1d2a3a;
-  font-size: 17px;
+  font-size: 15px;
   margin: 0 12px;
+}
+@media screen and (min-width: 1024px) {
+  #content .second-nav .frame a {
+    font-size: 17px;
+  }
 }
 #content .second-nav .frame a:hover,
 #content .second-nav .frame a.active {
@@ -449,20 +454,12 @@ a:hover {
 #content .third-nav span,
 #content .pages span {
   font-family: 'Oranienbaum';
-  font-size: 15px;
   margin: 1px 5px;
   color: #000;
   display: inline-block;
   vertical-align: middle;
   padding: 3px 10px 0;
-}
-@media screen and (min-width: 1024px) {
-  #content .third-nav a,
-  #content .pages a,
-  #content .third-nav span,
-  #content .pages span {
-    font-size: 18px;
-  }
+  font-size: 18px;
 }
 #content .third-nav a:hover,
 #content .pages a:hover,
