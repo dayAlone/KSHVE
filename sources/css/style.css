@@ -449,12 +449,20 @@ a:hover {
 #content .third-nav span,
 #content .pages span {
   font-family: 'Oranienbaum';
-  font-size: 18px;
+  font-size: 15px;
   margin: 1px 5px;
   color: #000;
   display: inline-block;
   vertical-align: middle;
   padding: 3px 10px 0;
+}
+@media screen and (min-width: 1024px) {
+  #content .third-nav a,
+  #content .pages a,
+  #content .third-nav span,
+  #content .pages span {
+    font-size: 18px;
+  }
 }
 #content .third-nav a:hover,
 #content .pages a:hover,

@@ -10940,7 +10940,15 @@ a:hover {
   color: #000;
 
   font-family: 'Oranienbaum';
-  font-size: 18px;
+  font-size: 15px;
+}
+@media screen and (min-width: 1024px) {
+  #content .third-nav a,
+  #content .pages a,
+  #content .third-nav span,
+  #content .pages span {
+    font-size: 18px;
+  }
 }
 #content .third-nav a:hover,
 #content .pages a:hover,
