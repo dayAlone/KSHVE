@@ -384,10 +384,10 @@ a:hover {
 }
 #content .second-nav .frame a {
   color: #1d2a3a;
-  font-size: 15px;
+  font-size: 14px;
   margin: 0 12px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   #content .second-nav .frame a {
     font-size: 17px;
   }
@@ -395,11 +395,6 @@ a:hover {
 #content .second-nav .frame a:hover,
 #content .second-nav .frame a.active {
   color: #0076db;
-}
-@media screen and (max-width: 1280px) {
-  #content .second-nav .frame a {
-    font-size: 15px;
-  }
 }
 #content .second-nav .frame .shadow-top,
 #content .second-nav .frame .shadow-bottom {
